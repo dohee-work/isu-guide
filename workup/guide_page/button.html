@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>guide</title>
+    <link rel="stylesheet" href="../../src/css/external.css"><!-- 외부 css -->
+    <link rel="stylesheet" href="../../portal/assets/css/portal_style.css"><!-- 포털 css 링크 -->
+    <link rel="stylesheet" href="../guide_style.css"><!-- 가이드 전용 css 링크 -->
+</head>
+<body>
+    <div class="wrap"><!-- 권한 2개 이상일 경우 class="addAuth" 를 해당 위치에 붙임 -->
+        <!-- header -->
+        <header class="header">
+            <h1><a href="../guide.html" class="logo"><span class="blind">ISU</span></a></h1>
+            <!-- gnb -->
+            <nav class="gnb">
+                <ul>
+                    <li class="default ui_accordion"><!-- 임직원공통에만 'default' / 권한에 따라 달라지는 메뉴에는 'auth' Class 부여 -->
+                        <a class="depth1 acco_btn"><i>person</i>임직원공통<i class="more"></i></a>
+                        <ul class="depth2 acco_cont" style="display: block">
+                            <li>
+                                <a href="layout.html"><i>web</i>Layout</a>
+                            </li>
+                            <li>
+                                <a href="button.html"><i>touch_app</i>Button</a>
+                            </li>
+                            <li>
+                                <a href="form.html"><i>fact_check</i>Form</a>
+                            </li>
+                            <li>
+                                <a href="input.html"><i>check_box</i>Input</a>
+                            </li>
+                            <li>
+                                <a href="list.html"><i>format_list_bulleted</i>List</a>
+                            </li>
+                            <li>
+                                <a href="tab.html"><i>tab</i>Tab</a>
+                            </li>
+                            <li>
+                                <a href="table.html"><i>table_view</i>Table</a>
+                            </li>
+                            <li>
+                                <a href="popup.html"><i>web_asset</i>Popup</a>
+                            </li>
+                            <li>
+                                <a href="etc.html"><i>more</i>Etc.</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- // gnb -->
+            <div class="info_hr">
+                <button class="btn_hr butn" data-toggle="modal" data-target="#hrmodal"><span><i>outlined_flag</i>HR담당자</span></button>
+            </div>
+        </header>
+        <!-- // header -->
+        <!-- container -->
+        <div class="content main"><!-- 메인페이지에만 해당 클래스에 main 클래스 추가 -->
+            <!-- 컨텐츠 상단 고정 영역 -->
+            <article class="cont_header">
+                <div class="wrap_inner clear">
+                    <div class="fl">
+                        <!-- 검색어 입력영역 -->
+                        <div class="wrap_search">
+                            <input type="text" placeholder="임직원 검색">
+                            <button class="btn_search material-icons-outlined"><span>search</span><span class="hide">검색</span></button>
+                        </div>
+                        <!-- // 검색어 입력영역 -->
+                    </div>
+                    <div class="fr util_list">
+                        <button class="butn_ico"><span>lock</span><span class="hide">화면잠금</span></button>
+                        <a href="#" class="butn_ico"><span>assignment</span><span class="hide">게시판</span></a>
+                        <button class="butn_ico noti on"><span>notifications</span><span class="hide">알림</span></button><!-- 알림이 있을 경우 class="on"이 추가 됨 -->
+                        <!-- 프로필 -->
+                        <div class="wrap_member ui_dropdown none right">
+                            <button class="drop_btn profile"></button><!-- 프로필 버튼 -->
+                            <ul class="drop_cont list">
+                                <li><a href="#">비밀번호변경</a></li>
+                                <li><a href="#">로그아웃</a></li>
+                            </ul>
+                        </div>
+                        <!-- // 프로필 -->
+                    </div>
+                </div>
+            </article>
+            <!-- // 컨텐츠 상단 고정 영역 -->
+            <!-- 컨텐츠 영역 -->
+            <article class="cont">
+                <div class="wrap_inner">
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h2>Button</h2>
+                            <ul class="list_txt">
+                                <li>버튼 스타일은 크게 3가지(.butn / .butn_ico / .butn_more)다.</li>
+                                <li>아이콘이 들어가는 부분은 구글 폰트 아이콘(https://fonts.google.com/icons?selected=Material+Icons+Outlined)에서 사용한다.</li>
+                                <li>
+                                    버튼 작성 시 아래와 같이 작성
+                                    <div class="code">
+                                        &lt;button class="butn"&gt;&lt;span&gt;button text&lt;/span&gt;&lt;/button&gt;
+                                    </div>
+                                </li>
+                                <li>버튼 텍스트를 span으로 감싸서 작성 해야한다. <br>(Internet Explorer에서 버튼 클릭 시 text가 내려가는 모션 방지가 이유) </li>
+                            </ul>
+                        </section>
+                        <!-- // 환영메세지 -->
+                    </div>
+                    <div class="cont_row">
+                        <div class="box greeting">
+                            <h3 class="tit1 mt0">.butn</h3>
+                            <ul class="list_txt">
+                                <li>기본 버튼 클래스.</li>
+                                <li>버튼의 모든 스타일에 hover는 #35353a에 opacity 0.05로 적용 되어있음</li>
+                                <li>해당 클래스를 기본으로 붙이면서 새로운 스타일 클래스 추가 할 때마다 색상, 라인, 폰트, 레이아웃 등의 형태가 변화한다.</li>
+                                <li>아이콘과 함께 text가 있는 버튼 사용 시 아래와 같이 사용한다.
+                                    <div class="code">
+                                        &lt;button class="butn"&gt;&lt;i&gt;<span class="hlight">아이콘 폰트명</span>&lt;/i&gt;&lt;span&gt;button text&lt;/span&gt;&lt;/button&gt;
+                                    </div>
+                                </li>
+                            </ul>
+                            <h4 class="tit2">색상관련 클래스</h4>
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <button class="butn blue"><span>class="blue"</span></button>
+                                    <div class="code">
+                                        &lt;button class="butn <span class="hlight">blue</span>"&gt;&lt;span&gt;class="blue"&lt;/span&gt;&lt;/button&gt;
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <button class="butn green"><span>class="green"</span></button>
+                                    <div class="code">
+                                        &lt;button class="butn <span class="hlight">green</span>"&gt;&lt;span&gt;class="green"&lt;/span&gt;&lt;/button&gt;
+                                    </div>
+                                </div>
+                                <div class="col my-2">
+                                    <button class="butn red"><span>class="red"</span></button>
+                                    <div class="code">
+                                        &lt;button class="butn <span class="hlight">red</span>"&gt;&lt;span&gt;class="red"&lt;/span&gt;&lt;/button&gt;
+                                    </div>
+                                </div>
+                                <div class="col my-2">
+                                    <button class="butn yellow"><span>class="yellow"</span></button>
+                                    <div class="code">
+                                        &lt;button class="butn <span class="hlight">yellow</span>"&gt;&lt;span&gt;class="yellow"&lt;/span&gt;&lt;/button&gt;
+                                    </div>
+                                </div>
+                                <div class="col my-2">
+                                    <button class="butn deepblue"><span>class="deepblue"</span></button>
+                                    <div class="code">
+                                        &lt;button class="butn <span class="hlight">deepblue</span>"&gt;&lt;span&gt;class="deepblue"&lt;/span&gt;&lt;/button&gt;
+                                    </div>
+                                </div>
+                                <div class="col my-2">
+                                    <button class="butn white"><span>class="white"</span></button>
+                                    <div class="code">
+                                        &lt;button class="butn <span class="hlight">white</span>"&gt;&lt;span&gt;class="white"&lt;/span&gt;&lt;/button&gt;
+                                    </div>
+                                </div>
+                                <div class="col my-2">
+                                    <button class="butn gray"><span>class="gray"</span></button>
+                                    <div class="code">
+                                        &lt;button class="butn <span class="hlight">gray</span>"&gt;&lt;span&gt;class="gray"&lt;/span&gt;&lt;/button&gt;
+                                    </div>
+                                </div>
+                                <div class="col my-2">
+                                    <button class="butn gray2"><span>class="gray2"</span></button>
+                                    <div class="code">
+                                        &lt;button class="butn <span class="hlight">gray2</span>"&gt;&lt;span&gt;class="gray2"&lt;/span&gt;&lt;/button&gt;
+                                    </div>
+                                </div>
+                                <div class="col my-2">
+                                    <button class="butn black1"><span>class="black1"</span></button>
+                                    <div class="code">
+                                        &lt;button class="butn <span class="hlight">black1</span>"&gt;&lt;span&gt;class="black1"&lt;/span&gt;&lt;/button&gt;
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="tit2">선 관련 클래스</h4>
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <button class="butn outline"><span>class="outline"</span></button>
+                                    <div class="code">
+                                        &lt;button class="butn <span class="hlight">outline</span>"&gt;&lt;span&gt;class="outline"&lt;/span&gt;&lt;/button&gt;
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="tit2">Padding 관련 클래스</h4>
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <button class="butn outline thin"><span>class="thin"</span></button>
+                                    <div class="code">
+                                        &lt;button class="butn <span class="hlight">thin</span>"&gt;&lt;span&gt;class="thin"&lt;/span&gt;&lt;/button&gt;
+                                    </div>
+                                    <p>thin은 padding-top, padding-bottom: 6px</p>
+                                </div>
+                                <div class="col">
+                                    <button class="butn outline slim"><span>class="slim"</span></button>
+                                    <div class="code">
+                                        &lt;button class="butn <span class="hlight">slim</span>"&gt;&lt;span&gt;class="slim"&lt;/span&gt;&lt;/button&gt;
+                                    </div>
+                                    <p>slim은 padding-top, padding-bottom: 8px</p>
+                                </div>
+                            </div>
+                            <h4 class="tit2">쓰임새 별 클래스</h4>
+                            <h5 class="tit3">다운로드</h5>
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <button class="butn down"><span>class="down"</span><i></i></button>
+                                    <div class="code">
+                                        &lt;button class="butn <span class="hlight">down</span>"&gt;&lt;span&gt;class="down"&lt;/span&gt;&lt;i&gt;&lt;/i&gt;&lt;/button&gt;
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <button class="butn down2"><i></i><span>class="down2"</span></button>
+                                    <div class="code">
+                                        &lt;button class="butn <span class="hlight">down2</span>"&gt;&lt;i&gt;&lt;/i&gt;&lt;span&gt;class="down2"&lt;/span&gt;&lt;/button&gt;
+                                    </div>
+                                </div>
+                                <div class="col my-2">
+                                    <button class="butn down3"><i></i><span>class="down3"</span></button>
+                                    <div class="code">
+                                        &lt;button class="butn <span class="hlight">down3</span>"&gt;&lt;i&gt;&lt;/i&gt;&lt;span&gt;class="down3"&lt;/span&gt;&lt;/button&gt;
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="tit3">추가</h5>
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <button class="butn add"><i></i><span>class="add"</span></button>
+                                    <div class="code">
+                                        &lt;button class="butn <span class="hlight">add</span>"&gt;&lt;i&gt;&lt;/i&gt;&lt;span&gt;class="add"&lt;/span&gt;&lt;/button&gt;
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="tit3">확인</h5>
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <button class="butn check"><i></i><span>class="check"</span></button>
+                                    <div class="code">
+                                        &lt;button class="butn <span class="hlight">check</span>"&gt;&lt;i&gt;&lt;/i&gt;&lt;span&gt;class="check"&lt;/span&gt;&lt;/button&gt;
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="tit3">기타</h5>
+                            <p>아래와 같이 클릭이 두개 링크 일 경우</p>
+                            <div class="row my-2">
+                                <div class="col">
+                                    <div class="col-4 butn gray multilink"><i></i><a href="#">참고 사이트 01</a><p class="hover"><button class="butn_ico"><span>edit</span></button></p></div>
+                                    <div class="code">
+                                        &lt;div class="butn gray <span class="hlight">multilink</span>"&gt;&lt;i&gt;&lt;/i&gt;&lt;a href="#"&gt;참고 사이트 01&lt;/a&gt;&lt;p class="hover"&gt;&lt;button class="butn_ico"&gt;&lt;span&gt;edit&lt;/span&gt;&lt;/button&gt;&lt;/p&gt;&lt;/div&gt;
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="d-block">
+                                <span class="mdo-ico">category</span><span class="mdo-ico">cloud_queue</span><span class="mdo-ico"><img src="../image/interests_black_24dp.svg" alt=""></span><span class="mdo-ico">language</span><span class="mdo-ico">dashboard</span><span class="mdo-ico">local_activity</span>
+                            </p>
+                            <p>앞에 아이콘은 총 6가지로 위의 아이콘 순서대로 반복되게 되어있다.</p>
+                        </div>
+                    </div>
+                    <div class="cont_row">
+                        <div class="box greeting">
+                            <h3 class="tit1 mt0">.butn_ico</h3>
+                            <ul class="list_txt">
+                                <li>아이콘만 들어가 있는 버튼 생성 시 사용되는 버튼 클래스 </li>
+                                <li>기본 사이즈 : 가로 36px x 세로 36px </li>
+                                <li>아이콘 폰트 사이즈 : 18px</li>
+                                <li>
+                                    버튼 작성 시 아래와 같이 작성
+                                    <div class="code">
+                                        &lt;button class="butn_ico"&gt;&lt;span&gt;<span class="hlight">아이콘 폰트명</span>&lt;/span&gt;&lt;/button&gt;
+                                    </div>
+                                </li>
+                            </ul>
+                            <h3 class="tit1">자주 쓰이는 클래스</h3>
+                            <p>아래 항목에 한하여 아이콘 폰트명을 넣을 필요 없이 자동 생성된다.</p>
+                            <div class="row row-cols-2 mt8">
+                                <div class="col">
+                                    <button class="butn_ico edit"></button>
+                                    <div class="code">
+                                        &lt;button class="butn_ico <span class="hlight">edit</span>"&gt;&lt;/button&gt;
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <button class="butn_ico close float-none"></button>
+                                    <div class="code">
+                                        &lt;button class="butn_ico <span class="hlight">close</span>"&gt;&lt;/button&gt;
+                                    </div>
+                                </div>
+                                <div class="col my-2">
+                                    <button class="butn_ico arrow-left"></button>
+                                    <div class="code">
+                                        &lt;button class="butn_ico <span class="hlight">arrow-left</span>"&gt;&lt;/button&gt;
+                                    </div>
+                                </div>
+                                <div class="col my-2">
+                                    <button class="butn_ico arrow-right"></button>
+                                    <div class="code">
+                                        &lt;button class="butn_ico <span class="hlight">arrow-right</span>"&gt;&lt;/button&gt;
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cont_row">
+                        <div class="box greeting">
+                            <h3 class="tit1 mt0">.butn_more</h3>
+                            <button class="butn butn_more"><span>button text</span><i></i></button>
+                            <ul class="list_txt mt8">
+                                <li>'더보기' 같은 버튼일 때 주로 사용</li>
+                                <li>Text 뒤에 '>' 아이콘이 붙음</li>
+                                <li>기본 버튼 클래스인 butn 과 같이 사용해야 한다.</li>
+                                <li>
+                                    버튼 작성 시 아래와 같이 작성
+                                    <div class="code">
+                                        &lt;button class="butn butn_more"&gt;&lt;span&gt;button text&lt;/span&gt;&lt;i&gt;&lt;/i&gt;&lt;/button&gt;
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- // 컨텐츠 영역 -->
+        </div>
+        <!-- // container -->
+    </div>
+    <!-- HR담당자 팝업 -->
+    <div class="popup modal mid" id="hrmodal"><!-- popup 클래스에 사이즈 조절 클래스는 3가지(sml/mid/lar) -->
+        <div class="popup_inner modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="title">HR담당자</h1>
+                </div>
+                <div class="modal-body">
+                    <ul class="list col2">
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                            <div class="info">
+                                <p class="name">김이수</p>
+                                <p class="roll">급여</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"></div><!-- 이미지 없을 떄 -->
+                            <div class="info">
+                                <p class="name">이희수</p>
+                                <p class="roll">인사</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                            <div class="info">
+                                <p class="name">김수찬</p>
+                                <p class="roll">복리후생</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                            <div class="info">
+                                <p class="name">이수지</p>
+                                <p class="roll">근태,조직</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="butn hbold" data-dismiss="modal" aria-label="Close"><span>닫기</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // HR담당자 팝업 -->
+</body>
+<!-- 외부파일 스크립트 -->
+<script src="../../src/plugins/jQuery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="../../src/plugins/jQuery-slimScroll-1.3.8/jquery.slimscroll.min.js"></script>
+<script src="../../src/plugins/bootstrap-4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../src/plugins/jsCalendar_v1.4.4/source/jsCalendar.min.js"></script>
+<script src="../../src/plugins/jsCalendar_v1.4.4/source/jsCalendar.lang.ko.js"></script>
+<script src="../../src/js/common.js"></script>
+<!-- // 외부파일 스크립트 -->
+</html>

@@ -1,0 +1,366 @@
+@charset 'UTF-8';
+
+@import url('../font/font.css');
+@import url('../css/common.css');
+@import url('../css/modalPopup.css');
+
+/* table */
+.wrap_table table{width: 100%; table-layout: fixed}
+.wrap_table .tr_list:hover{background-color: rgba(53,53,58,0.04)}
+.wrap_table th{padding: 8px; background-color: #f8f8f8}
+.wrap_table td{padding: 16px 8px; letter-spacing: -0.39px}
+.wrap_table th, .wrap_table td{text-align: center; font-weight: 400; color: #777e87; vertical-align: middle; font-size: 13px;}
+.wrap_table th:first-child, .wrap_table td:first-child{padding-left: 24px}
+.wrap_table th:last-child, .wrap_table td:last-child{padding-right: 24px}
+.wrap_table.txt_left th, .wrap_table.txt_left td{text-align: left}
+.wrap_table.txt_right th, .wrap_table.txt_right td{text-align: right}
+.wrap_table .subject{text-align: left}
+.wrap_table .title{display: block; width: 100%; line-height: 1.33; font-size: 15px; font-weight: 500; letter-spacing: -0.45px; color: #363c43; text-overflow: ellipsis; white-space: nowrap; overflow: hidden}
+.wrap_table .table_body{margin: 4px 0 12px}
+.wrap_table .table_body td.none{padding-top: 65px; padding-bottom: 257px}
+.wrap_table .table_body td.none  i{vertical-align: text-bottom; margin-right: 4px}
+.wrap_table .tr_list{border-bottom: 1px solid #f4f6f8}
+
+/* 게시판스타일 */
+.top-fix{background: #fdfbea;}/* 22.01.04 게시판(공지사항/사규)상단 고정 css 수정 */
+
+/* 메인 */
+.main .butn{border-radius: 10px}
+.main.content, .main.content .cont_header{padding-left: 70px}
+.addAuth .main.content, .addAuth .main.content .cont_header{padding-left: 146px}
+.main .cont .box h2{font-size: 20px; letter-spacing: -0.6px}
+.main .box_header{display: flex; justify-content:space-between; align-items: center; padding: 12px 24px}
+.main .box_header.type2{padding: 20px 24px}
+.main .box_header h2{display: inline-block; vertical-align: middle}
+.main .box_footer{padding: 8px 14px; line-height: 1; border-top: 1px solid #d5d8dc; text-align: right}
+.main .box_footer .butn_more{font-weight: 700}
+/* 메인 내 리스트 테이블 공통 */
+.main .table_body td:last-child .line2{max-height: 2.25em; line-height: 1.15}
+.main .table_body.none > *{padding-top: 65px; line-height: 24px; font-size: 15px; letter-spacing: -0.45px; color: #777e87}
+.main .table_body.none > i{vertical-align: bottom; margin-right: 8px}
+.main .table_body.none.typeImg td{padding: 135px 19.475% 125px}
+.main .table_body.none.typeImg .img{float: left; position: relative; width: 120px; height: 120px; overflow: hidden}
+.main .table_body.none.typeImg .img img{position: absolute; top:50%; left:50%; transform: translate(-50%, -50%)}
+.main .table_body.none.typeImg .txt{float: left; width: calc(100% - 152px); margin-left: 32px; text-align: left}
+.main .table_body.none.typeImg .txt > *{line-height: 1.43; font-size: 14px; font-weight: 400; letter-spacing: -0.42px}
+.main .table_body.none.typeImg .txt .tit{line-height: 1.33; font-size: 15px; font-weight: 700; line-height: 1.33; color:#363c43}
+.main .table_body.none.typeImg .txt .tit + p{margin:8px 0 16px}
+
+/* 환영메세지 */
+.main .greeting {padding: 24px 32px}
+.main .greeting p{display: inline-block; vertical-align: middle}
+.main .greeting .wrap_name{margin-right: 12px; font-size: 20px; font-weight: 700; letter-spacing: -0.6px}
+.main .greeting .wrap_name i{margin-right: 4px; font-size:24px; vertical-align: sub; color: #087ef7}
+.main .greeting .txt{font-size: 14px; font-weight: 400; color:#9ca3ab}
+
+/* 근태현황 */
+.main .checkWork{padding: 40px 32px; background-color: #465166; color: #fff}
+.main .checkWork h2{margin-bottom: 24px;}
+.main .checkWork > div+div{margin-top: 24px; padding-top: 24px; border-top:1px solid #394356}
+/* 211026 추가[S] */
+.main .checkWork .butn{width: 100%; margin-top: 32px; padding: 12px 10px; font-weight: 700; word-break: keep-all}
+.main .checkWork .butn.blue{padding: 12px 0px; text-align: center;}
+.main .checkWork .butn.checked{background-color:#8bb0d5!important; color:#ccddef!important; }
+.main .checkWork .butn.white{color:#363c43}
+.main .checkWork .butn.green{padding: 12px 0px; font-weight: 400; text-align: center;}
+.main .checkWork .list.col3 > *{width: calc(100% / 3.2)}
+@media only screen and (min-width: 1350px) and (max-width: 1500px){
+    .main .checkWork .butn.blue{padding-left: 18px; padding-right: 14px}
+    .main .checkWork .butn.green{padding-left: 5px; padding-right: 5px}
+    .main .checkWork .butn.green i{margin-right: 3px}
+}
+@media only screen and (max-width: 1349px){
+    .main .checkWork .butn.blue, .main .checkWork .butn.green{padding-left: 5px; padding-right: 5px; text-align: center}
+    .main .checkWork .butn i{display: none}
+}
+/* 211026 추가[E] */
+.main .checkWork dt{font-size: 16px; font-weight: 500; letter-spacing: -0.48px; color: #cacdcf}
+.main .checkWork dd{font-size: 16px; font-weight: 700}
+/* .main .checkWork .workinfo .butn i{max-width:18px; opacity: 0; font-size: 0px;} */
+.main .checkWork .workinfo .butn i{max-width:18px;}
+.main .checkWork .workinfo dl > *, .main .checkWork .worktime .timebar dl > *{display: inline-block}
+.main .checkWork .workinfo dl + dl{margin-top: 12px}
+.main .checkWork .workinfo dt{width: 89px}
+.main .checkWork .worktime .timebar{margin-top: 17px}
+.main .checkWork .worktime dl+.timebar{margin-top:24px}
+.main .checkWork .worktime .timebar dt, .main .checkWork .worktime .timebar dd{font-size: 15px}
+.main .checkWork .worktime .timebar dt{margin-right: 12px}
+.main .checkWork .worktime .timebar i{margin-right: 4px; font-size: 18px; line-height: 22px; font-weight: lighter; vertical-align: bottom}
+.main .checkWork .worktime .timebar.allow i{color: #21bf54}
+.main .checkWork .worktime .timebar.extend i{color: #ffc304}
+.main .checkWork .worktime .progress{margin-top:8px; background-color: #343f53}
+
+/* 할일 */
+.main .worklist .wrap_tab{position: relative}
+.main .worklist .wrap_tab .butn_float{position: absolute; top: 16px; right: 24px; padding-left: 12px;}
+.main .worklist .wrap_tab .butn_float i{vertical-align: text-bottom}
+.main .worklist .tr_list.late{background-color: #ffe8e0}
+.main .worklist .tr_list.late:hover{background-color: #f7e1d9}
+.main .worklist .workState{display: block; width: 36px; line-height: 34px; border: 1px solid #dbe3e6; border-radius: 100%; text-align:center; color: #9ca3ab; font-size: 12px; font-family: 'Noto Sans KR'; font-style: normal}
+.main .worklist .now .workState{border-color: #087ef7;color: #087ef7; font-weight: 700}
+.main .worklist .late .workState{border-color: #ff4909;color: #ff4909; font-weight: 700; font-style: normal}
+.main .worklist .workState:before{content:'예정'}
+.main .worklist .now .workState:before{content:'오늘'}
+.main .worklist .late .workState:before{content:'지남'}
+.main .worklist .info_behind{line-height: 1}
+.main .worklist .tr_list .info_behind .title{transform: translateY(10px)}
+.main .worklist .info_behind .info{opacity: 0}
+.main .worklist .tr_list:hover .info_behind .info{opacity: 1}
+.main .worklist .tr_list:hover .info_behind .title,.main .worklist .tr_list:hover .info_behind .info{transition: all 0.1s ease 0s; transform: none}
+.main .worklist .tr_list .nothover, .main .worklist .tr_list:hover .hover{display: block}
+.main .worklist .tr_list .hover,.main .worklist .tr_list:hover .nothover{display: none}
+.main .worklist .tr_list:hover .butn{margin:0 auto; padding: 8px; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);}
+.main .worklist .tr_list .nothover{margin:0 auto;}
+.main .worklist .info_behind .info *{display:inline-block; line-height: 1.54;}
+.main .worklist .info_behind .info > *+*:before{content:''; display: inline-block; width: 1px; height: 12px; margin: 0 2px -1px 4px; background-color: #c4cdd6;}
+.main .worklist .info_behind .info dt{font-weight: 400}
+.main .worklist .info_behind .info dd{font-weight: 700}
+.main .worklist .info_behind .time > *:first-child:after{content:'-'}
+
+/* 금일 근태 현황 */
+.main .attendState .col1{width: calc(100% / 3); max-width: 230px; background-color: #fafafa}
+.main .attendState .col2{display: flex; justify-content: space-between; flex-wrap: wrap; gap:10px; width: calc(100% - 240px); margin-left: 10px;}
+.main .attendState .col2 .cate{width: calc((100% - 10px) / 2); max-width: 230px}
+.main .attendState .cate{height: 98px; padding: 29px 24px; border-radius: 10px; background-color: #fafafa; overflow: hidden}
+.main .attendState .cate.t_blue{height: 206px;}
+.main .attendState .cate:not(.t_blue) .slimScrollDiv{display: none}
+.main .attendState .cate:not(.t_blue) .cate_detail{padding-bottom: 8px}
+.main .attendState .cate:not(.t_blue) .cate_detail > *{display: inline-block; width: calc(100% / 4.2); text-align: left; padding-bottom: 2px; font-size: 13px; line-height: 1.54; letter-spacing: -0.39px; color: #fff}
+.main .attendState .cate:hover:not(.t_blue) .slimScrollDiv{display: block; padding: 0 0 0 16px}
+.main .attendState .cate .cate_total dt{font-size: 16px; font-weight: 900; line-height: 1.25; letter-spacing: -0.48px; color: #363c43}
+.main .attendState .cate .cate_total dt > *{vertical-align: middle}
+.main .attendState .cate .cate_total dt i{display: inline-block; width: 40px; height: 40px; margin-right: 24px; border-radius: 40px; font-size: 16px; line-height: 40px; text-align: center; color: #fff}
+.main .attendState .cate .cate_total dd{font-size: 8px; color: #9ca3ab}
+.main .attendState .cate .cate_total dd strong{display: inline-block; font-size: 20px; line-height: 1; color: #363c43; vertical-align: text-bottom}
+.main .attendState .cate:hover:not(.t_blue){padding: 0}
+.main .attendState .cate:hover:not(.t_blue) .cate_total{padding: 16px 16px 0; margin-bottom:8px;}
+.main .attendState .cate:hover:not(.t_blue) .cate_total dt{font-size: 13px; color: #fff}
+.main .attendState .cate:hover:not(.t_blue) .cate_total dd{display: none}
+.main .attendState .cate:hover:not(.t_blue) .cate_total i{width: 16px; height: 16px; margin-right: 8px; border-radius: 0; line-height: 16px;}
+.main .attendState .cate.t_blue .cate_total dt i{background-color: #087ef7}
+.main .attendState .cate.t_green:hover, .main .attendState .cate.t_green .cate_total dt i{background-color: #21bf54}
+.main .attendState .cate.t_yellow:hover, .main .attendState .cate.t_yellow .cate_total dt i{background-color: #ffc304}
+.main .attendState .cate.t_gray:hover, .main .attendState .cate.t_gray .cate_total dt i{background-color: #465166}
+.main .attendState .cate.t_red:hover, .main .attendState .cate.t_red .cate_total dt i{background-color: #ff5c5c}
+.main .attendState .cate.t_blue .slimScrollDiv{margin-top: 12px}
+.main .attendState .cate.t_blue .slimScrollDiv, .main .attendState .cate.t_blue .cate_detail{padding-right: 16px}
+.main .attendState .cate.t_blue .cate_detail li+li{margin: 8px 0}
+.main .attendState .cate.t_blue .cate_detail .butn{padding: 7px 16px; box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.08)}
+.main .attendState .cate.t_blue .cate_detail .butn > *{vertical-align: middle; transform: translateY(0)}
+.main .attendState .cate.t_blue .cate_detail .butn > span+span{font-size: 8px}
+.main .attendState .cate.t_blue .cate_detail .butn > *:first-child{display:inline-block; width: 65%; max-width: 98px; margin-right: 5%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: left; font-size: 13px; font-weight: 700; color: #777e87}
+.main .attendState .cate.t_blue .cate_detail .butn strong{font-size: 14px; vertical-align: baseline}
+
+/* 금일 근태 현황 flexible layout */
+@media only screen and (min-width: 1300px) and (max-width: 1500px){
+    .main .attendState .cate .cate_total dt i{margin-right: 10px}
+    .main .attendState .col2{width: 65%}
+}
+@media only screen and (max-width: 1299px){
+    .main .attendState .col2{width: calc(100% - (100% / 2.8));}
+    .main .attendState .cate .cate_total dt i{margin-right: 3%}
+    .main .attendState .cate:not(.t_blue){padding: 19px 24px;}
+    .main .attendState .cate:not(.t_blue) .cate_total dt{display: inline-grid; text-align: center}
+    .main .attendState .cate:hover:not(.t_blue) .cate_total dt{display: inline}
+}
+.main .attendState .cate:not(.t_blue) .slimScrollDiv .slimScrollBar{background: rgb(70 81 102 / 30%) !important}
+.main .attendState .cate.t_gray .slimScrollDiv .slimScrollBar{background: rgb(34 41 53 / 50%) !important}
+
+/* 근태이슈 */
+.main .attendIssue{background-color: #465166; color: #fff}
+.main .attendIssue h2 i{margin-right: 12px; vertical-align: text-bottom; color: #ff5c5c}
+.main .attendIssue .date{padding: 16px 24px; font-weight: 700; font-size: 14px; background-color: #394356}
+.main .attendIssue .date i{margin-right: 8px; font-size: 16px; vertical-align: text-bottom; color: #21bf54}
+.main .attendIssue .list_issue{padding: 2px 24px 8px;}
+.main .attendIssue .list_issue li{padding: 8px 0; font-size: 14px; line-height: 1.43; border-bottom: 1px solid #394356; color: #cacdcf}
+.main .attendIssue .list_issue li > *{display: inline-block; vertical-align: top}
+.main .attendIssue .list_issue .name{width: 78px; margin-right: 8px; color: #fff}
+.main .attendIssue .list_issue .name:before{content:''; display: inline-flex; width: 4px; height: 4px; margin-right: 8px; border-radius: 4px; background-color: #fff;vertical-align: middle;transform: translateY(-2px);}
+.main .attendIssue .list_issue .issue{width: calc(100% - 90px)}
+
+/* 통계 */
+.main .chartBox{padding: 32px; background-color: #fafafa; color: #777e87}
+.main .chartBox .chartBox_tit > *{line-height: 39px}
+.main .chartBox .chartBox_tit:not(.d-flex) .tit{margin-top: 10px; margin-bottom: 4px; line-height: 1.5}
+.main .chartBox .tit{font-weight: 700; font-size: 15px;letter-spacing: -0.45px; color:#363c43}
+.main .chartBox .total{font-size: 14px}
+.main .chartBox .total strong{display: inline-block; padding-right:2px; font-size: 2.285em; font-weight: 700; color: #363c43; letter-spacing: -0.96px; line-height: 1; vertical-align: text-bottom}
+.main .chartBox .total .minute{padding-left: 4px}
+.main .chartBox .wrap_chart{display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 0 8px}
+/* .main .chartBox .wrap_chart canvas{width: 100% !important; height: 100% !important} */
+.main .chartBox *+.wrap_chart{margin-top:32px}
+.main .chartBox .chart_legend{max-width: 35.595%}
+.main .chartBox .wrap_chart .chart.circle{width: 50.85%}
+.main .chartBox .wrap_chart .chart.bar{width: 100%}
+.main .chartBox .wrap_chart .chart.bar li{display: flex; justify-content: flex-start; align-items: center; width: 100%}
+.main .chartBox .wrap_chart .chart.bar li+li{margin-top: 16px}
+.main .chartBox .wrap_chart .chart.bar .name{width: 18%; max-width: 111px; margin-right: 12px; font-size: 14px; font-weight: 700; line-height: 1.43; letter-spacing: -0.42px; color:#777e87}
+.main .chartBox .wrap_chart .chart.bar .value{min-width: 45px; margin-left: 12px; letter-spacing: -0.39px; font-weight: 500; color: #363c43}
+.main .chartBox .wrap_chart .chart.bar .bar{min-width: 9px; background-color: #d5d8dc}
+.main .notchart{background-repeat: no-repeat; background-size: auto 94px}
+.main .notchart.bg1{background-image: url('../../../src/images/bg_average.svg'); background-size: auto 146px; background-position: 81% 85%}
+.main .notchart.bg2{background-image: url('../../../src/images/bg_com.svg'); background-position: 77% 90%}
+.main .notchart.bg3{background-image: url('../../../src/images/bg_team.svg'); background-position: 90% 90%}
+.main .notchart + .notchart{border-left: 1px solid rgb(213 216 220 / 50%)}
+.main .avarageWork .col{width: 540px;}
+
+/* 차트 label custom */
+.chart_legend .symbol{display: inline-block; width: 6px; height: 6px; margin-right: 8px; border-radius: 6px; vertical-align: middle; transform: translateY(1px)}
+.chart_legend .label{display: inline-block; width: calc(100% - 14px); vertical-align: middle; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; color: #777e87}
+.chart_legend li+li{margin-top: 8px}
+.chart_legend.hori li{display: inline-block}
+.chart_legend.hori li+li{margin-top:0; margin-left: 16px}
+
+.main .ui_dropdown.date{width: 180px}
+
+/* 일정 */
+.main .schedule > .box_header h2{line-height: 36px}
+.main .schedule .wrap_calendar{padding: 8px 16px 16px; border-top: 1px solid #e7e9eb; border-bottom: 1px solid #e7e9eb}
+.main .schedule .wrap_cal_detail{min-height: 160px; background: #fafafa; padding-bottom: 24px; border-radius: 0 0 10px 10px}
+.main .schedule .wrap_cal_detail .box_header{align-items: flex-start}
+.main .schedule .wrap_cal_detail h3{font-weight: 700; font-size: 14px; letter-spacing: -0.42px}
+.main .schedule .wrap_cal_detail .cal_detail{margin: 0 24px}
+.main .schedule .wrap_cal_detail .cal_detail li{display:flex; align-items: flex-start}
+.main .schedule .wrap_cal_detail .cal_detail li:before{content:''; display: inline-block; width: 6px; height: 6px; margin-right: 8px; border-radius: 6px; transform: translateY(8px)}
+.main .schedule .wrap_cal_detail .cal_detail .team:before{background-color: #21bf54}
+.main .schedule .wrap_cal_detail .cal_detail .comp:before{background-color: #087ef7}
+.main .schedule .wrap_cal_detail .cal_detail li+li{margin-top: 8px}
+.main .schedule .wrap_cal_detail .cal_detail .day{width: 57px; color: #5f6368; font-weight: 400}
+.main .schedule .wrap_cal_detail .cal_detail .txt{letter-spacing: -0.39px; font-weight: 700}
+.main .schedule .wrap_cal_detail .box_header{padding: 16px 24px}
+
+/* HR 담당자 영역 */
+.authHR .list.col3 > *{width: calc(33.3% - 16px); margin-bottom:8px}
+.authHR .list.col3.link > *{margin-bottom:16px}
+.authHR .list.col3{margin-bottom: -8px}
+.authHR .list.link.col3{margin-bottom: -16px}
+.authHR .list > *{margin-right: 24px}
+.authHR .list > *:nth-child(3n){margin-right:0}
+.authHR .list.link .butn.add{width: 100%; padding: 18px 24px; font-weight: 700}
+.authHR .butn.multilink.gray{padding-left: 31px; padding-right: 23px}
+
+/* IBsheet 위 버튼 */
+.btn-outer-wrap{line-height: 0}
+.btn-outer-wrap .tit{padding: 9px 0px 3px;margin-right: 12px;font-size: 16px;font-weight: 700;line-height: 1.25;letter-spacing: -0.48px;color: #363c43;}
+.btn-outer-wrap .btn-wrap li{float: left}
+.btn-outer-wrap .btn-wrap li+li{margin-left: 8px}
+
+/* calendar */
+.wrap_calendar table{width: 100%; table-layout: fixed}
+.wrap_calendar .jsCalendar-week-days th, .wrap_calendar tbody td{width: 48px; text-align: center; line-height: 36px; font-weight: 400}
+.wrap_calendar .jsCalendar-week-days th{color: #777e87}
+.wrap_calendar tbody td{position: relative; z-index: 0; cursor: default;}
+.wrap_calendar tbody td[class*="selected"]{color: #fff}
+.wrap_calendar tbody td[class*="selected"]:before, .wrap_calendar tbody td:hover:before{content:''; position: absolute; top:50%; left:50%; display: block; width: 24px; height: 24px; border-radius: 24px; background-color: #465166; transform: translate(-50%, -50%); z-index: -1}
+.wrap_calendar tbody td:hover:before{opacity: 0.1}
+.wrap_calendar tbody td[class*="selected"]:hover:before{opacity: 1}
+.wrap_calendar .jsCalendar-title{padding: 16px}
+.wrap_calendar .jsCalendar-title [class*="name"]{display: inline-block; line-height: 1.4; font-size: 20px; font-weight: 700; text-align: left; letter-spacing: -0.6px}
+.wrap_calendar.jsCalendar .jsCalendar-title [class*="right"]{float: right}
+.wrap_calendar [class*="nav"]{position: relative; display: inline-block; width: 26px; height: 26px; margin-left: 6px; border-radius: 4px; border: solid 1px #dedede; vertical-align: top; cursor: pointer; overflow: hidden; color: #5f6368}
+.wrap_calendar [class*="nav"]:after{display: inline-block; margin: 6px 5px 4px; font-size: 16px; transform: translateY(-2px)}
+.wrap_calendar .material-icons-outlined[class*="left"]:after, .wrap_calendar .available.material-icons-outlined[class*="prev"]:after{content:'chevron_left'}
+.wrap_calendar .material-icons-outlined[class*="right"]:after, .wrap_calendar .available.material-icons-outlined[class*="next"]:after{content:'chevron_right'}
+.wrap_calendar tbody td[class*="previous"], .wrap_calendar tbody td[class*="next"]{color: #d7d9dd}
+.wrap_calendar [class*="nav"]:before{content:''; position: absolute; top:0; left:0; display: block; width: 100%; height: 100%; background-color: #35353a; opacity: 0}
+.wrap_calendar [class*="nav"]:hover:before{opacity: 0.05}
+
+/* 회원가입 & 비밀번호찾기 */
+.popup.full.join,
+.popup.full.pw{position:relative; overflow: hidden;}
+.popup.full.join>.bg,
+.popup.full.pw>.bg{position: absolute; top:80px; right:0; bottom:0; left:0; z-index:0; width: 100vw; height: 100vh; object-position: 50% 50%; object-fit: cover;}
+.popup.full.join .slimScrollDiv [class*="body"],
+.popup.full.pw .slimScrollDiv [class*="body"] {padding: 50px 32px;}
+.popup.full.join [class*="inner"]{width: 500px; min-height: 585px; padding: 50px 85px;}
+
+
+.popup.full.join [class*="header"],
+.popup.full.pw [class*="header"]{padding: 24px 52px}
+
+.join [class*="form2"] > *:first-child,
+.pw [class*="form2"] > *:first-child{font-weight: 700; font-size: 16px; line-height: 1.25; letter-spacing: -0.48px}
+.join [class*="form2"] form{margin-top:40px}
+.join [class*="form2"] form dl,
+.pw [class*="form2"] form dl{margin-bottom: 16px}
+.join .wrap_agree{margin-bottom: 40px}
+.join .inputGroup.md_input.md-form{padding: 0; border:0}
+.join .inputGroup.md_input.md-form label{z-index: 3}
+.join .inputGroup.md_input.md-form input{width: 100%; padding-right: 60px !important}
+.join .inputGroup.md_input.md-form .time{position: absolute; right: 0; line-height: 21px}
+
+
+/* 비밀번호찾기 */
+.popup.full.pw [class*="inner"]{width: 748px; min-height: 80px; padding: 50px 32px;}
+.popup.full.pw.reset [class*="inner"]{width: 500px; min-height: 326px; padding: 50px 85px 60px;}
+.pw [class*="form2"] form{margin-top:24px}
+.pw table.basic.type3 tr th{padding:18px 24px;}
+.pw table.basic.type3 tr td{position:relative; padding:12px 16px 16px 16px;}
+.pw table.basic.type3 tr td .desc-list{position: absolute; bottom: -16px; padding-left:10px; margin-top: 0px;}
+.pw table.basic.type3 tr th+td{padding-right:0px;}
+.pw table.basic.type4 tr td{padding:16px 0px;}
+.pw table.basic .quiz{text-align: left; margin-bottom: 8px; font-size: 14px; font-weight: bold;}
+.pw .btn-reset{height: 42px;}
+.pw .btn-wrap{margin-top:16px; text-align: right;}
+.pw .btn-wrap>.butn{display: inline-block;}
+.pw.reset .form_fin{margin-top: 32px;}
+
+/* 초기세팅 팝업 */
+.popup.start:not(.modal), .popup.modal.start .popup_inner {max-width: 1170px}
+.popup.modal.start .modal-content{height: calc(100vh - 168px); overflow: hidden}
+.popup.modal.start .slimScrollDiv, .popup.modal.start .slimScrollDiv [class*="body"]{height: 100% !important;}
+.popup.modal.start [class*="body"]{padding:0}
+.popup.modal.start [class*="footer"]{border-top:0}
+.popup.modal.start .intro{display: flex; justify-content: space-between;}
+.popup.modal.start .intro > *{display: flex; align-items: center}
+.popup.modal.start .intro .bg{justify-content: center; width: 485px; background-color: #f5faff; text-align: center}
+.popup.modal.start .intro > *:not(.bg){justify-content: flex-start; width: calc(100% - 485px)}
+.popup.modal.start .intro p{letter-spacing: -0.4px; font-size: 20px; color: #777e87}
+.popup.modal.start .intro .tit{margin-bottom: 20px; font-size: 30px; line-height: 1.4; letter-spacing: -0.9px;}
+.popup.modal.start .intro .tit .mdo-ico{margin-right: 6px; font-size: 32px; vertical-align: middle; transform: translateY(-2px)}
+.popup.modal.start [class*="footer"] .butn{font-weight: 500; font-size: 16px}
+.popup.modal.start [class*="footer"] .butn i{font-size: 16px; vertical-align: middle}
+.popup.modal.start .intro .butn{width: 244px; margin-top: 40px}
+.wrap_step{margin: 13px auto 6px}
+.wrap_step li{display: inline-flex; align-items: center; font-weight: 700; font-size: 16px; color: #cacdcf; text-align: center; letter-spacing: -0.48px; vertical-align: middle}
+.wrap_step li div{min-width: 92px}
+.wrap_step li span:first-child{display: inline-block; width: 40px; height: 40px; line-height: 38px; border-radius: 40px; background-color: #cacdcf; color: #fff !important; font-size: 18px; text-align: center}
+.wrap_step li span + span{display: block; margin-top: 8px; font-weight: 700}
+.wrap_step li:after{content:''; display: block; align-self: flex-start; width: 172px; height: 1px; margin-top: 20px; border-top: 1px dashed #cacdcf}
+.wrap_step li:last-child:after{display: none}
+.wrap_step .end span{color: #363c43}
+.wrap_step .end span:first-child{background-color: #087ef7}
+.register_step{padding: 32px 40px; background: #fff}
+.register_step li{display: flex; justify-content: space-between; align-items: center; color: #9ca3ab; font-size: 16px; font-weight: 700; letter-spacing: -0.48px;}
+.register_step li+li{margin-top: 32px}
+.register_step .mdo-ico:not(.check){margin-right: 16px; font-size: 20px; vertical-align: middle}
+.register_step li.this, .register_step li.end{color: #363c43}
+.register_step .end .check:before{content:'\e5ca'; color: #21bf54}
+.start [class*="wrap_form"]{width: 700px; margin: 31px auto; padding: 0}
+.start [class*="wrap_form"] form > div{margin-bottom: 16px}
+.start [class*="wrap_form"] .input{width: 100%}
+.start .guide_txt{font-size: 18px; color: #777e87}
+.start .guide_txt i{margin-right: 6px; font-size: 24px; vertical-align: sub}
+.start .guide_txt i.business{display: inline-block; width: 24px; height: 24px; background: transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjRweCIgZmlsbD0iIzA4N2VmNyI+PHBhdGggZD0iTTAgMGgyNHYyNEgwVjB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTEyIDdWNWMwLTEuMS0uOS0yLTItMkg0Yy0xLjEgMC0yIC45LTIgMnYxNGMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjljMC0xLjEtLjktMi0yLTJoLTh6TTYgMTlINHYtMmgydjJ6bTAtNEg0di0yaDJ2MnptMC00SDRWOWgydjJ6bTAtNEg0VjVoMnYyem00IDEySDh2LTJoMnYyem0wLTRIOHYtMmgydjJ6bTAtNEg4VjloMnYyem0wLTRIOFY1aDJ2MnptOSAxMmgtN3YtMmgydi0yaC0ydi0yaDJ2LTJoLTJWOWg3Yy41NSAwIDEgLjQ1IDEgMXY4YzAgLjU1LS40NSAxLTEgMXptLTEtOGgtMnYyaDJ2LTJ6bTAgNGgtMnYyaDJ2LTJ6Ii8+PC9zdmc+") no-repeat 0 0;background-size: 100%;-webkit-background-size: 100%;-moz-background-size: 100%;-o-background-size: 100%;}
+.start .guide_txt i.home_work{display: inline-block; width: 24px; height: 24px; background: transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0cHgiIGZpbGw9IiMwODdlZjciPjxnPjxyZWN0IGZpbGw9Im5vbmUiIGhlaWdodD0iMjQiIHdpZHRoPSIyNCIvPjxyZWN0IGZpbGw9Im5vbmUiIGhlaWdodD0iMjQiIHdpZHRoPSIyNCIvPjwvZz48Zz48Zz48cGF0aCBkPSJNMjAsM2gtOGMtMC41NSwwLTEsMC40NS0xLDF2MS42MWMwLDAsMCwwLDAuMDEsMC4wMWw1LDQuNUMxNi42NCwxMC42OCwxNywxMS41LDE3LDEyLjM1VjEzaDJ2MmgtMnYyaDJ2MmgtMnYyaDMgYzAuNTUsMCwxLTAuNDUsMS0xVjRDMjEsMy40NSwyMC41NSwzLDIwLDN6IE0xNSw3aC0yVjVoMlY3eiBNMTksMTFoLTJWOWgyVjExeiBNMTksN2gtMlY1aDJWN3oiLz48cGF0aCBkPSJNMTUsMjB2LTcuNjVjMC0wLjI4LTAuMTItMC41NS0wLjMzLTAuNzRsLTUtNC41QzkuNDgsNi45Myw5LjI0LDYuODUsOSw2Ljg1Yy0wLjI0LDAtMC40OCwwLjA5LTAuNjcsMC4yNmwtNSw0LjUgQzMuMTIsMTEuNzksMywxMi4wNiwzLDEyLjM1VjIwYzAsMC41NSwwLjQ1LDEsMSwxaDJjMC41NSwwLDEtMC40NSwxLTF2LTRoNHY0YzAsMC41NSwwLjQ1LDEsMSwxaDJDMTQuNTUsMjEsMTUsMjAuNTUsMTUsMjB6Ii8+PC9nPjwvZz48L3N2Zz4=") no-repeat 0 0;background-size: 100%;-webkit-background-size: 100%;-moz-background-size: 100%;-o-background-size: 100%;}
+.start .step3 {background: #f5f6f7}
+.start .step3 > *:first-child{width: 246px; min-height: 616px; box-shadow: 1px 0 1px 0 rgba(0, 0, 0, 0.08);}
+.start .step3 > *:last-child{width: calc(100% - 246px); padding: 32px 60px 0}
+.start .step3 .footer{margin:0 -60px}
+.start .step3 .btn-outer-wrap .butn{font-size: 15px}
+.start .step3 .sheetDiv{width: 392px; height: 457px; padding: 22px 16px; border: solid 1px #e0e0e0; background-color: #fff;}
+.start .step3 .sheetDiv [id*="sheetDiv"]{width: 100%; height: 357px !important; margin-top: 10px;}
+.start .step3 .sheetDiv.short [id*="sheetDiv"]{height: 327px !important; margin-bottom: 10px}
+.start .step3 .sheetDiv.gray{background-color: #e7e9ec;}
+.start .step3 .board .IBISURowSpaceLast .IBISUSolidRow{height: auto !important}
+.start .step3 .sheetDiv [id*="sheetDiv"]+.wrap_checkbox{margin: 0 -16px -22px; padding: 16px; border-top: 1px solid #e0e0e0}
+
+/* 트리 */
+.wrap_tree {display: flex; justify-content: space-between; gap: 16px; padding-top: 16px; padding-bottom: 40px}
+.wrap_tree [class*="tree"]{background-color: #fafafa}
+.wrap_tree > *{width: 261px}
+.popup .wrap_tree .slimScrollDiv, .popup .wrap_tree .slimScrollDiv [class*="tree"]{width: 261px !important; height: 513px !important; max-height: 513px !important}
+
+/* 근무유형팝업 */
+.popup .workType .title{margin-bottom: 12px;}
+.popup .workType .slimScrollDiv{padding-right: 29px}

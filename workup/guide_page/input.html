@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>guide</title>
+    <link rel="stylesheet" href="../../src/css/external.css"><!-- 외부 css -->
+    <link rel="stylesheet" href="../../portal/assets/css/portal_style.css"><!-- 포털 css 링크 -->
+    <link rel="stylesheet" href="../guide_style.css"><!-- 가이드 전용 css 링크 -->
+</head>
+<body>
+    <div class="wrap"><!-- 권한 2개 이상일 경우 class="addAuth" 를 해당 위치에 붙임 -->
+        <!-- header -->
+        <header class="header">
+            <h1><a href="../guide.html" class="logo"><span class="blind">ISU</span></a></h1>
+            <!-- gnb -->
+            <nav class="gnb">
+                <ul>
+                    <li class="default ui_accordion"><!-- 임직원공통에만 'default' / 권한에 따라 달라지는 메뉴에는 'auth' Class 부여 -->
+                        <a class="depth1 acco_btn"><i>person</i>임직원공통<i class="more"></i></a>
+                        <ul class="depth2 acco_cont" style="display: block">
+                            <li>
+                                <a href="layout.html"><i>web</i>Layout</a>
+                            </li>
+                            <li>
+                                <a href="button.html"><i>touch_app</i>Button</a>
+                            </li>
+                            <li>
+                                <a href="form.html"><i>fact_check</i>Form</a>
+                            </li>
+                            <li>
+                                <a href="input.html"><i>check_box</i>Input</a>
+                            </li>
+                            <li>
+                                <a href="list.html"><i>format_list_bulleted</i>List</a>
+                            </li>
+                            <li>
+                                <a href="tab.html"><i>tab</i>Tab</a>
+                            </li>
+                            <li>
+                                <a href="table.html"><i>table_view</i>Table</a>
+                            </li>
+                            <li>
+                                <a href="popup.html"><i>web_asset</i>Popup</a>
+                            </li>
+                            <li>
+                                <a href="etc.html"><i>more</i>Etc.</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- // gnb -->
+            <div class="info_hr">
+                <button class="btn_hr butn" data-toggle="modal" data-target="#hrmodal"><span><i>outlined_flag</i>HR담당자</span></button>
+            </div>
+        </header>
+        <!-- // header -->
+        <!-- container -->
+        <div class="content main"><!-- 메인페이지에만 해당 클래스에 main 클래스 추가 -->
+            <!-- 컨텐츠 상단 고정 영역 -->
+            <article class="cont_header">
+                <div class="wrap_inner clear">
+                    <div class="fl">
+                        <!-- 검색어 입력영역 -->
+                        <div class="wrap_search">
+                            <input type="text" placeholder="임직원 검색">
+                            <button class="btn_search material-icons-outlined"><span>search</span><span class="hide">검색</span></button>
+                        </div>
+                        <!-- // 검색어 입력영역 -->
+                    </div>
+                    <div class="fr util_list">
+                        <button class="butn_ico"><span>lock</span><span class="hide">화면잠금</span></button>
+                        <a href="#" class="butn_ico"><span>assignment</span><span class="hide">게시판</span></a>
+                        <button class="butn_ico noti on"><span>notifications</span><span class="hide">알림</span></button><!-- 알림이 있을 경우 class="on"이 추가 됨 -->
+                        <!-- 프로필 -->
+                        <div class="wrap_member ui_dropdown none right">
+                            <button class="drop_btn profile"></button><!-- 프로필 버튼 -->
+                            <ul class="drop_cont list">
+                                <li><a href="#">비밀번호변경</a></li>
+                                <li><a href="#">로그아웃</a></li>
+                            </ul>
+                        </div>
+                        <!-- // 프로필 -->
+                    </div>
+                </div>
+            </article>
+            <!-- // 컨텐츠 상단 고정 영역 -->
+            <!-- 컨텐츠 영역 -->
+            <article class="cont">
+                <div class="wrap_inner">
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h2>Input</h2>
+                            <h3 class="tit1">기본 Input</h3>
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <h4 class="tit2">기존 Input style</h4>
+                                    <input type="text" class="input" placeholder="placeholder">
+                                    <div class="code">
+                                        <pre>&lt;input type="text" class="<span class="hlight">input</span>" placeholder="placeholder"&gt;</pre>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h4 class="tit2">기존 Input style Disabled</h4>
+                                    <h5 class="tit3">사용불가 한 input</h5>
+                                    <div class="my-2">
+                                        <input type="text" class="input" placeholder="placeholder" disabled>
+                                        <div class="code">
+                                            <pre>&lt;input type="text" class="<span class="hlight">input</span>" placeholder="placeholder" <span class="hlight3">disabled</span>&gt;</pre>
+                                        </div>
+                                    </div>
+                                    <h5 class="tit3">사용불가 한 스타일만 있는 input</h5>
+                                    <div class="my-2">
+                                        <input type="text" class="input disabled" placeholder="placeholder">
+                                        <div class="code">
+                                            <pre>&lt;input type="text" class="<span class="hlight">input</span> <span class="hlight3">disabled</span>" placeholder="placeholder"&gt;</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="tit2">Material style Input</h4>
+                            <ul class="list_txt mb16">
+                                <li>해당 내용을 사용할 시 mdb.js plugin이 연결되어야 아래와 같이 동작이 가능하다.</li>
+                                <li>사용 동작은 mdb(<a href="https://mdbootstrap.com/docs/standard/forms/input-fields/" target="_blank">https://mdbootstrap.com/</a>)에서 참고.</li>
+                            </ul>
+                            <div class="col-4 px-0 md-form md-outline md_input">
+                                <input type="text" id="form1" class="form-control">
+                                <label for="form1">Label</label>
+                            </div>
+                            <div class="code">
+                                <pre>
+&lt;div class="md-form md-outline md_input"&gt;
+    &lt;input type="text" id="<span class="hlight">form1</span>" <span class="hlight2">class="form-control"</span>&gt;
+    &lt;label for="<span class="hlight">form1</span>"&gt;Label&lt;/label&gt;
+&lt;/div&gt;</pre>
+                            </div>
+                            <p>노란색 표시로 같이 묶여야 하고, 파란색 표시의 클래스가 input에 반드시 들어가야 한다.</p>
+                            <h3 class="tit1">Input Group</h3>
+                            <ul class="list_txt mb8">
+                                <li>input과 함께 아래와 같이 다른 내용이 함께 들어간 형태의 input</li>
+                            </ul>
+                            <div class="inputGroup">
+                                <button type="button" class="butn_ico"><span>date_range</span></button>
+                                <input type="text" placeholder="placeholder">
+                            </div>
+                            <div class="code">
+                                <pre>
+&lt;div class="inputGroup"&gt;
+    &lt;button type="button" class="butn_ico"&gt;&lt;span&gt;date_range&lt;/span&gt;&lt;/button&gt;
+    &lt;input type="text" placeholder="placeholder"&gt;
+&lt;/div&gt;</pre>
+                            </div>
+                            <h3 class="tit1">Search Input</h3>
+                            <div class="wrap_search">
+                                <input type="text" placeholder="검색">
+                                <button class="btn_search material-icons-outlined"><span>search</span><span class="hide">검색</span></button>
+                            </div>
+                            <div class="code">
+                                <pre>
+&lt;div class="wrap_search"&gt;
+    &lt;input type="text" placeholder="검색"&gt;
+    &lt;button class="btn_search material-icons-outlined"&gt;&lt;span&gt;search&lt;/span&gt;&lt;span class="hide"&gt;검색&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;</pre>
+                            </div>
+                            <h3 class="tit1">input + button 있는 형태</h3>
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <h4 class="tit2 mt0">기존 Input style</h4>
+                                    <div class="clickLink">
+                                        <input type="text" class="input" placeholder="할 일 입력"><a class="butn outline"><span>링크</span></a><!-- 링크가 추가 될 시 input 클래스에 linked 클래스가 추가됨 -->
+                                    </div>
+                                    <div class="code w-100">
+                                        <pre>
+&lt;div class="<span class="hlight">clickLink</span>"&gt;
+    &lt;input type="text" class="input" placeholder="할 일 입력"&gt;&lt;a class="butn outline"&gt;&lt;span&gt;링크&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;</pre>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h4 class="tit2 mt0">Material style Input</h4>
+                                    <div class="clickLink">
+                                        <div class="md-form md-outline md_input">
+                                            <input type="text" id="form2" class="form-control">
+                                            <label for="form2" class="">*회사 이메일 주소</label>
+                                        </div>
+                                        <a class="butn outline" href="#"><span>인증</span></a>
+                                    </div>
+                                    <div class="code w-100">
+                                        <pre>
+&lt;div class="<span class="hlight">clickLink</span>"&gt;
+    &lt;div class="md-form md-outline md_input"&gt;
+        &lt;input type="text" id="form2" class="form-control"&gt;
+        &lt;label for="form2" class=""&gt;*회사 이메일 주소&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;a class="butn outline" href="#"&gt;&lt;span&gt;인증&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;</pre>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h4 class="tit2">링크 표시 있는 Input style</h4>
+                                    <div class="clickLink">
+                                        <div class="input" contenteditable="true" placeholder="할 일 입력"></div><a class="butn outline"><span>링크</span></a><!-- 링크가 추가 될 시 input 클래스에 linked 클래스가 추가됨 -->
+                                    </div>
+                                    <div class="code w-100">
+                                        <pre>
+&lt;div class="<span class="hlight">clickLink</span>"&gt;
+    &lt;div class="input" <span class="hlight2">contenteditable="true"</span>&gt;&lt;/div&gt;&lt;a class="butn outline"&gt;&lt;span&gt;링크&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;</pre>
+                                    </div>
+                                    <ul class="list_txt my-2">
+                                        <li>input 형태에서는 링크 표시가 있는 형태가 구현 될 수 없어서 비슷하게 동작 될 수 있도록 만들어진 형태이다.</li>
+                                        <li>해당 스타일에는 링크가 추가 될 조건 일시 input 클래스에 linked 클래스가 추가 되어야 한다.<br>추가 되면 아래와 같은 형태가 된다.</li>
+                                    </ul>
+                                    <div class="clickLink">
+                                        <div class="input linked" contenteditable="true">이수시스템</div><a class="butn outline"><span>링크</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="tit1">text 자동완성</h3>
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <!-- Text 자동완성영역 -->
+                                    <div class="wrap_autoTXT" style="margin-bottom: 160px">
+                                        <div class="autoTXT">
+                                            <p class="txt">R&amp;D 센터<button class="butn_ico close"><span class="hide">삭제</span></button></p><!-- 자동완성 입력된 컨텐츠 -->
+                                            <p class="txt">클라우드서비스팀<button class="butn_ico close"><span class="hide">삭제</span></button></p>
+                                            <!-- 자동완성 입력 -->
+                                            <div class="inputTXT">
+                                                <input type="text"><!-- 자동완성 입력 input -->
+                                                <!-- 자동완성 검색 리스트 -->
+                                                <ul class="autoTXTList">
+                                                    <li><a><span>HR사업팀</span></a></li>
+                                                    <li><a><span>HR사업발전을 위한 미래산업 혁신팀</span></a></li>
+                                                </ul>
+                                                <!-- // 자동완성 검색 리스트 -->
+                                            </div>
+                                            <!-- // 자동완성 입력 -->
+                                        </div>
+                                    </div>
+                                    <!-- // Text 자동완성영역 -->
+                                    <div class="code">
+                                        <pre>&lt;!-- Text 자동완성영역 --&gt;
+&lt;div class="wrap_autoTXT"&gt;
+    &lt;div class="autoTXT"&gt;
+        &lt;p class="txt"&gt;R&amp;amp;D 센터&lt;button class="butn_ico close"&gt;&lt;span class="hide"&gt;삭제&lt;/span&gt;&lt;/button&gt;&lt;/p&gt;&lt;!-- 자동완성 입력된 컨텐츠 --&gt;
+        &lt;p class="txt"&gt;클라우드서비스팀&lt;button class="butn_ico close"&gt;&lt;span class="hide"&gt;삭제&lt;/span&gt;&lt;/button&gt;&lt;/p&gt;
+        &lt;!-- 자동완성 입력 --&gt;
+        &lt;div class="inputTXT"&gt;
+            &lt;input type="text"&gt;&lt;!-- 자동완성 입력 input --&gt;
+            &lt;!-- 자동완성 검색 리스트 --&gt;
+            &lt;ul class="autoTXTList"&gt;
+                &lt;li&gt;&lt;a&gt;&lt;span&gt;HR사업팀&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;&lt;span&gt;HR사업발전을 위한 미래산업 혁신팀&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;!-- // 자동완성 검색 리스트 --&gt;
+        &lt;/div&gt;
+        &lt;!-- // 자동완성 입력 --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- // Text 자동완성영역 --&gt;</pre>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <!-- Text 자동완성영역 -->
+                                    <div class="wrap_autoTXT" style="margin-bottom: 160px">
+                                        <div class="autoTXT">
+                                            <p class="txt">이수진<button class="butn_ico close"><span class="hide">삭제</span></button></p><!-- 자동완성 입력된 컨텐츠 -->
+                                            <p class="txt">박철수<button class="butn_ico close"><span class="hide">삭제</span></button></p>
+                                            <!-- 자동완성 입력 -->
+                                            <div class="inputTXT">
+                                                <input type="text"><!-- 자동완성 입력 input -->
+                                                <!-- 자동완성 검색 리스트 -->
+                                                <ul class="autoTXTList">
+                                                    <li><a><span class="name">김성택</span><span class="sub rank">대리</span><p class="sub roll">전략사업팀</p></a></li>
+                                                    <li><a><span class="name">김성택</span><span class="sub rank">과장</span><p class="sub roll">미래핵심사업부서</p></a></li>
+                                                    <li><a><span class="name">김성택</span><span class="sub rank">디렉터</span><p class="sub roll">HR</p></a></li>
+                                                </ul>
+                                                <!-- // 자동완성 검색 리스트 -->
+                                            </div>
+                                            <!-- // 자동완성 입력 -->
+                                        </div>
+                                    </div>
+                                    <!-- // Text 자동완성영역 -->
+                                    <div class="code">
+                                        <pre>&lt;!-- Text 자동완성영역 --&gt;
+&lt;div class="wrap_autoTXT"&gt;
+    &lt;div class="autoTXT"&gt;
+        &lt;p class="txt"&gt;이수진&lt;button class="butn_ico close"&gt;&lt;span class="hide"&gt;삭제&lt;/span&gt;&lt;/button&gt;&lt;/p&gt;&lt;!-- 자동완성 입력된 컨텐츠 --&gt;
+        &lt;p class="txt"&gt;박철수&lt;button class="butn_ico close"&gt;&lt;span class="hide"&gt;삭제&lt;/span&gt;&lt;/button&gt;&lt;/p&gt;
+        &lt;!-- 자동완성 입력 --&gt;
+        &lt;div class="inputTXT"&gt;
+            &lt;input type="text"&gt;&lt;!-- 자동완성 입력 input --&gt;
+            &lt;!-- 자동완성 검색 리스트 --&gt;
+            &lt;ul class="autoTXTList"&gt;
+                &lt;li&gt;&lt;a&gt;&lt;span class="name"&gt;김성택&lt;/span&gt;&lt;span class="sub rank"&gt;대리&lt;/span&gt;&lt;p class="sub roll"&gt;전략사업팀&lt;/p&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;&lt;span class="name"&gt;김성택&lt;/span&gt;&lt;span class="sub rank"&gt;과장&lt;/span&gt;&lt;p class="sub roll"&gt;미래핵심사업부서&lt;/p&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;&lt;span class="name"&gt;김성택&lt;/span&gt;&lt;span class="sub rank"&gt;디렉터&lt;/span&gt;&lt;p class="sub roll"&gt;HR&lt;/p&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;!-- // 자동완성 검색 리스트 --&gt;
+        &lt;/div&gt;
+        &lt;!-- // 자동완성 입력 --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- // Text 자동완성영역 --&gt;</pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h2>Checkbox</h2>
+                            <ul class="list_txt my-2">
+                                <li>기본 display 스타일은 inline-block 이다.</li>
+                                <li>기본 일 때 서로간의 간격은 16px이다.</li>
+                            </ul>
+                            <h3 class="tit1">Checkbox</h3>
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <h4 class="tit2 mt0">기본</h4>
+                                    <p class="checkbox"><input type="checkbox" id="checkbox1" checked><label for="checkbox1">이용약관 동의</label></p>
+                                    <div class="code">
+                                        <pre>&lt;p class="checkbox"&gt;&lt;input type="checkbox" id="checkbox1"&gt;&lt;label for="checkbox1"&gt;checkbox style 2&lt;/label&gt;&lt;/p&gt;</pre>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h4 class="tit2 mt0">Type 2</h4>
+                                    <p class="checkbox type2"><input type="checkbox" id="checkbox2" checked><label for="checkbox2">이용약관 동의</label></p>
+                                    <div class="code">
+                                        <pre>&lt;p class="checkbox <span class="hlight">type2</span>"&gt;&lt;input type="checkbox" id="checkbox1"&gt;&lt;label for="checkbox1"&gt;checkbox style 2&lt;/label&gt;&lt;/p&gt;</pre>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h4 class="tit2">label text 없는 checkbox</h4>
+                                    <p class="checkbox notxt"><input type="checkbox" id="checkbox3" checked><label for="checkbox3"></label></p>
+                                    <div class="code">
+                                        <pre>&lt;p class="checkbox <span class="hlight3">notxt</span>"&gt;&lt;input type="checkbox" id="checkbox3" checked&gt;&lt;label for="checkbox3"&gt;&lt;/label&gt;&lt;/p&gt;</pre>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h4 class="tit2">label text 없는 checkbox + type2</h4>
+                                    <p class="checkbox notxt type2"><input type="checkbox" id="checkbox4" checked><label for="checkbox4"></label></p>
+                                    <div class="code">
+                                        <pre>&lt;p class="checkbox <span class="hlight3">notxt</span> <span class="hlight">type2</span>"&gt;&lt;input type="checkbox" id="checkbox4" checked&gt;&lt;label for="checkbox4"&gt;&lt;/label&gt;&lt;/p&gt;</pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="tit1">Toggle switch</h3>
+                            <p class="checkToggle"><input type="checkbox" id="checkToggle1" checked><label for="checkToggle1"></label></p>
+                            <div class="code">
+                                <pre>&lt;p class="checkToggle"&gt;&lt;input type="checkbox" id="checkToggle1"&gt;&lt;label for="checkToggle1"&gt;&lt;/label&gt;&lt;/p&gt;</pre>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h2>checkbox toggle content</h2>
+                            <p class="d-block mb16">아래 checkbox를 클릭 시 보이지 않던 컨텐츠가 보이게 되어있음</p>
+                            <div class="checkbox type2 notxt">
+                                <input type="checkbox" id="popUseCheck1">
+                                <label for="popUseCheck1">
+                                    <div class="checkToggle inlineSubinput">
+                                        컨텐츠가 삽입 된 구간
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="code">
+                                <pre>
+&lt;div class="checkbox type2 notxt"&gt;
+    &lt;input type="checkbox" id="popUseCheck1"&gt;
+    &lt;label for="popUseCheck1"&gt;
+        &lt;div class="<span class="hlight">checkToggle</span> <span class="hlight2">inlineSubinput</span>"&gt;
+            컨텐츠가 삽입 된 구간
+        &lt;/div&gt;
+    &lt;/label&gt;
+&lt;/div&gt;</pre>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h2>Radio button</h2>
+                            <ul class="list_txt my-2">
+                                <li>기본 display 스타일은 inline-block 이다.</li>
+                                <li>기본 일 때 서로간의 간격은 36px, block type 일 때는 16px 이다.</li>
+                            </ul>
+                            <h3 class="tit1 mt0">기본</h3>
+                            <p class="btn_radio"><input type="radio" id="radiobtn_1_1" name="radiobtn_1" checked><label for="radiobtn_1_1">radio button</label></p>
+                            <div class="code">
+                                <pre>&lt;p class="btn_radio"&gt;&lt;input type="radio" id="radiobtn_1_1" name="radiobtn_1"&gt;&lt;label for="radiobtn_1_1"&gt;radio button&lt;/label&gt;&lt;/p&gt;</pre>
+                            </div>
+                            <h3 class="tit1">block type</h3>
+                            <p class="btn_radio block"><input type="radio" id="radiobtn_2_1" name="radiobtn_2" checked><label for="radiobtn_2_1">radio button block</label></p>
+                            <div class="code">
+                                <pre>&lt;p class="btn_radio <span class="hlight">block</span>"&gt;&lt;input type="radio" id="radiobtn_2_1" name="radiobtn_2"&gt;&lt;label for="radiobtn_2_1"&gt;radio button block&lt;/label&gt;&lt;/p&gt;</pre>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h2>Radio button toggle content</h2>
+                            <h3 class="tit1 mt0">기본</h3>
+                            <div class="btn_radio"><input type="radio" id="radiobtn_10_1" name="radiobtn_10"><label for="radiobtn_10_1">radio button1</label></div>
+                            <div class="btn_radio toggle"><input type="radio" id="radiobtn_10_2" name="radiobtn_10"><label for="radiobtn_10_2">radio button2 <div>컨텐츠 삽입 된 구간 1</div></label></div>
+                            <div class="btn_radio toggle"><input type="radio" id="radiobtn_10_3" name="radiobtn_10"><label for="radiobtn_10_3">radio button3 <div>컨텐츠 삽입 된 구간 2</div></label></div>
+                            <div class="code">
+                                <pre>
+&lt;div class="btn_radio"&gt;&lt;input type="radio" id="radiobtn_10_1" name="radiobtn_10"&gt;&lt;label for="radiobtn_10_1"&gt;radio button1&lt;/label&gt;&lt;/div&gt;
+&lt;div class="btn_radio <span class="hlight2">toggle</span>"&gt;&lt;input type="radio" id="radiobtn_10_2" name="radiobtn_10"&gt;&lt;label for="radiobtn_10_2"&gt;radio button2 <span class="hlight3">&lt;div&gt;컨텐츠 삽입 된 구간 1&lt;/div&gt;</span>&lt;/label&gt;&lt;/div&gt;
+&lt;div class="btn_radio <span class="hlight2">toggle</span>"&gt;&lt;input type="radio" id="radiobtn_10_3" name="radiobtn_10"&gt;&lt;label for="radiobtn_10_3"&gt;radio button3 <span class="hlight3">&lt;div&gt;컨텐츠 삽입 된 구간 2&lt;/div&gt;</span>&lt;/label&gt;&lt;/div&gt;</pre>
+                            </div>
+                            <h3 class="tit1">block type toggle</h3>
+                            <div class="btn_radio block"><input type="radio" id="radiobtn_11_1" name="radiobtn_11"><label for="radiobtn_11_1">radio button1</label></div>
+                            <div class="btn_radio block toggle"><input type="radio" id="radiobtn_11_2" name="radiobtn_11"><label for="radiobtn_11_2">radio button2 <div>컨텐츠 삽입 된 구간 1</div></label></div>
+                            <div class="btn_radio block toggle"><input type="radio" id="radiobtn_11_3" name="radiobtn_11"><label for="radiobtn_11_3">radio button3 <div>컨텐츠 삽입 된 구간 2</div></label></div>
+                            <div class="code">
+                                <pre>
+&lt;div class="btn_radio block"&gt;&lt;input type="radio" id="radiobtn_11_1" name="radiobtn_11"&gt;&lt;label for="radiobtn_11_1"&gt;radio button1&lt;/label&gt;&lt;/div&gt;
+&lt;div class="btn_radio <span class="hlight">block</span> <span class="hlight2">toggle</span>"&gt;&lt;input type="radio" id="radiobtn_11_2" name="radiobtn_11"&gt;&lt;label for="radiobtn_11_2"&gt;radio button2 <span class="hlight3">&lt;div&gt;컨텐츠 삽입 된 구간 1&lt;/div&gt;</span>&lt;/label&gt;&lt;/div&gt;
+&lt;div class="btn_radio <span class="hlight">block</span> <span class="hlight2">toggle</span>"&gt;&lt;input type="radio" id="radiobtn_11_3" name="radiobtn_11"&gt;&lt;label for="radiobtn_11_3"&gt;radio button3 <span class="hlight3">&lt;div&gt;컨텐츠 삽입 된 구간 2&lt;/div&gt;</span>&lt;/label&gt;&lt;/div&gt;</pre>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h2>file upload</h2>
+                            <h3 class="tit1 mt0">기본</h3>
+                            <div class="wrap_file">
+                                <div class="wrap_input">
+                                    <input type="file" multiple="" id="btn_file"><label for="btn_file" class="butn outline btn_file">파일선택</label>
+                                    <p class="info">파일 개 수 제한: 최대 6개, 용량 제한 10MB<br>확장자: doc, docx, xls, xlsx, ppt, pptx, pdf, zip, jpeg, jpg, png, bmp, gif</p>
+                                </div>
+                            </div>
+                            <div class="code">
+                                <pre>
+&lt;div class="wrap_file"&gt;
+    &lt;div class="wrap_input"&gt;
+        &lt;input type="file" multiple="" id="btn_file"&gt;&lt;label for="btn_file" class="butn outline btn_file"&gt;파일선택&lt;/label&gt;
+        &lt;p class="info"&gt;파일 개 수 제한: 최대 6개, 용량 제한 10MB&lt;br&gt;확장자: doc, docx, xls, xlsx, ppt, pptx, pdf, zip, jpeg, jpg, png, bmp, gif&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                            </div>
+                            <h3 class="tit1">여러개의 파일 업로드 시</h3>
+                            <ul class="list_txt mb16">
+                                <li>기본 형태보다는 해당 형태로 주로 사용된다.</li>
+                            </ul>
+                            <div class="wrap_file multi">
+                                <div class="wrap_input">
+                                    <input type="file" multiple="" id="btn_file"><label for="btn_file" class="butn outline btn_file">파일선택</label>
+                                    <p class="info">파일 개 수 제한: 최대 6개, 용량 제한 10MB<br>확장자: doc, docx, xls, xlsx, ppt, pptx, pdf, zip, jpeg, jpg, png, bmp, gif</p>
+                                </div>
+                                <ul class="list_file">
+                                    <li class="file xls"><button class="butn_ico close"></button><span class="fileName">근무일정표_경영지원팀.xls<span class="size">(14.2kb)</span></span></li>
+                                    <li class="file xls"><button class="butn_ico close"></button><span class="fileName">근무일정표_경영지원팀2.xls<span class="size">(14.2kb)</span></span></li>
+                                </ul>
+                            </div>
+                            <div class="code">
+                                <pre>
+&lt;div class="wrap_file <span class="hlight">multi</span>"&gt;
+    &lt;div class="wrap_input"&gt;
+        &lt;input type="file" multiple="" id="btn_file"&gt;&lt;label for="btn_file" class="butn outline btn_file"&gt;파일선택&lt;/label&gt;
+        &lt;p class="info"&gt;파일 개 수 제한: 최대 6개, 용량 제한 10MB&lt;br&gt;확장자: doc, docx, xls, xlsx, ppt, pptx, pdf, zip, jpeg, jpg, png, bmp, gif&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;ul class="list_file"&gt;
+        &lt;li class="file xls"&gt;&lt;button class="butn_ico close"&gt;&lt;/button&gt;&lt;span class="fileName"&gt;근무일정표_경영지원팀.xls&lt;span class="size"&gt;(14.2kb)&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+        &lt;li class="file xls"&gt;&lt;button class="butn_ico close"&gt;&lt;/button&gt;&lt;span class="fileName"&gt;근무일정표_경영지원팀2.xls&lt;span class="size"&gt;(14.2kb)&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</pre>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="cont_row">
+                        <div class="box greeting">
+                            <h2>simple editor</h2>
+                            <ul class="list_txt mb16">
+                                <li>해당 editor는 html과 함께 포함된 script가 같이 있어줘야 동작할 수 있다.</li>
+                            </ul>
+                            <div class="editor-wrap">
+                                <ul class="toolbar">
+                                    <li><a data-command="bold" class="btn btn-tool bold waves-effect waves-light"></a></li>
+                                    <li><a data-command="italic" class="btn btn-tool italic waves-effect waves-light"></a></li>
+                                    <li><a data-command="underline" class="btn btn-tool underLine waves-effect waves-light"></a></li>
+                                    <li><a data-command="strikeThrough" class="btn btn-tool lineThrough waves-effect waves-light"></a></li>
+                                </ul>
+                                <div id="editor" class="editor" contenteditable="true" placeholder="내용을 작성해주세요."></div>
+                            </div>
+                            <script>
+                                var commandButtons = document.querySelectorAll(".toolbar a");
+                                for (var i = 0; i < commandButtons.length; i++) {
+                                    commandButtons[i].addEventListener("mousedown", function (e) {
+                                        e.preventDefault();
+
+                                        //var editor = document.getElementById("editor");
+                                        var commandName = e.target.getAttribute("data-command");
+                                        if (commandName === "html") {
+                                            var commandArgument = e.target.getAttribute("data-command-argument");
+                                            document.execCommand('formatBlock', false, commandArgument);
+                                        } else {
+                                            document.execCommand(commandName, false);
+                                            this.classList.toggle("on");
+                                        }
+                                    });
+                                }
+                            </script>
+                            <div class="code">
+                                <p class="hlight3">html</p>
+                                <pre>
+&lt;div class="editor-wrap"&gt;
+    &lt;ul class="toolbar"&gt;
+        &lt;li&gt;&lt;a data-command="bold" class="btn btn-tool bold waves-effect waves-light"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a data-command="italic" class="btn btn-tool italic waves-effect waves-light"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a data-command="underline" class="btn btn-tool underLine waves-effect waves-light"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a data-command="strikeThrough" class="btn btn-tool lineThrough waves-effect waves-light"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div id="editor" class="editor" contenteditable="true" placeholder="내용을 작성해주세요."&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>                             
+                                <p class="hlight3 mt16">script</p>
+                                <xmp style="font-family: 'Noto Sans KR'"><script>
+var commandButtons = document.querySelectorAll(".toolbar a");
+for (var i = 0; i < commandButtons.length; i++) {
+    commandButtons[i].addEventListener("mousedown", function (e) {
+        e.preventDefault();
+
+        //var editor = document.getElementById("editor");
+        var commandName = e.target.getAttribute("data-command");
+        if (commandName === "html") {
+            var commandArgument = e.target.getAttribute("data-command-argument");
+            document.execCommand('formatBlock', false, commandArgument);
+        } else {
+            document.execCommand(commandName, false);
+            this.classList.toggle("on");
+        }
+    });
+}
+</script></xmp>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- // 컨텐츠 영역 -->
+        </div>
+        <!-- // container -->
+    </div>
+    <!-- HR담당자 팝업 -->
+    <div class="popup modal mid" id="hrmodal"><!-- popup 클래스에 사이즈 조절 클래스는 3가지(sml/mid/lar) -->
+        <div class="popup_inner modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="title">HR담당자</h1>
+                </div>
+                <div class="modal-body">
+                    <ul class="list col2">
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                            <div class="info">
+                                <p class="name">김이수</p>
+                                <p class="roll">급여</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"></div><!-- 이미지 없을 떄 -->
+                            <div class="info">
+                                <p class="name">이희수</p>
+                                <p class="roll">인사</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                            <div class="info">
+                                <p class="name">김수찬</p>
+                                <p class="roll">복리후생</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                            <div class="info">
+                                <p class="name">이수지</p>
+                                <p class="roll">근태,조직</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="butn hbold" data-dismiss="modal" aria-label="Close"><span>닫기</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // HR담당자 팝업 -->
+</body>
+<!-- 외부파일 스크립트 -->
+<script src="../../src/plugins/jQuery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="../../src/plugins/jQuery-slimScroll-1.3.8/jquery.slimscroll.min.js"></script>
+<script src="../../src/plugins/bootstrap-4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../src/plugins/jsCalendar_v1.4.4/source/jsCalendar.min.js"></script>
+<script src="../../src/plugins/jsCalendar_v1.4.4/source/jsCalendar.lang.ko.js"></script>
+<script src="../../src/plugins/MDB-Free_4.19.2/js/mdb.min.js"></script>
+<script src="../../src/js/common.js"></script>
+<!-- // 외부파일 스크립트 -->
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>guide</title>
+    <link rel="stylesheet" href="../../src/css/external.css"><!-- 외부 css -->
+    <link rel="stylesheet" href="../../portal/assets/css/portal_style.css"><!-- 포털 css 링크 -->
+    <link rel="stylesheet" href="../guide_style.css"><!-- 가이드 전용 css 링크 -->
+</head>
+<body>
+    <div class="wrap"><!-- 권한 2개 이상일 경우 class="addAuth" 를 해당 위치에 붙임 -->
+        <!-- header -->
+        <header class="header">
+            <h1><a href="../guide.html" class="logo"><span class="blind">ISU</span></a></h1>
+            <!-- gnb -->
+            <nav class="gnb">
+                <ul>
+                    <li class="default ui_accordion"><!-- 임직원공통에만 'default' / 권한에 따라 달라지는 메뉴에는 'auth' Class 부여 -->
+                        <a class="depth1 acco_btn"><i>person</i>임직원공통<i class="more"></i></a>
+                        <ul class="depth2 acco_cont" style="display: block">
+                            <li>
+                                <a href="layout.html"><i>web</i>Layout</a>
+                            </li>
+                            <li>
+                                <a href="button.html"><i>touch_app</i>Button</a>
+                            </li>
+                            <li>
+                                <a href="form.html"><i>fact_check</i>Form</a>
+                            </li>
+                            <li>
+                                <a href="input.html"><i>check_box</i>Input</a>
+                            </li>
+                            <li>
+                                <a href="list.html"><i>format_list_bulleted</i>List</a>
+                            </li>
+                            <li>
+                                <a href="tab.html"><i>tab</i>Tab</a>
+                            </li>
+                            <li>
+                                <a href="table.html"><i>table_view</i>Table</a>
+                            </li>
+                            <li>
+                                <a href="popup.html"><i>web_asset</i>Popup</a>
+                            </li>
+                            <li>
+                                <a href="etc.html"><i>more</i>Etc.</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- // gnb -->
+            <div class="info_hr">
+                <button class="btn_hr butn" data-toggle="modal" data-target="#hrmodal"><span><i>outlined_flag</i>HR담당자</span></button>
+            </div>
+        </header>
+        <!-- // header -->
+        <!-- container -->
+        <div class="content main"><!-- 메인페이지에만 해당 클래스에 main 클래스 추가 -->
+            <!-- 컨텐츠 상단 고정 영역 -->
+            <article class="cont_header">
+                <div class="wrap_inner clear">
+                    <div class="fl">
+                        <!-- 검색어 입력영역 -->
+                        <div class="wrap_search">
+                            <input type="text" placeholder="임직원 검색">
+                            <button class="btn_search material-icons-outlined"><span>search</span><span class="hide">검색</span></button>
+                        </div>
+                        <!-- // 검색어 입력영역 -->
+                    </div>
+                    <div class="fr util_list">
+                        <button class="butn_ico"><span>lock</span><span class="hide">화면잠금</span></button>
+                        <a href="#" class="butn_ico"><span>assignment</span><span class="hide">게시판</span></a>
+                        <button class="butn_ico noti on"><span>notifications</span><span class="hide">알림</span></button><!-- 알림이 있을 경우 class="on"이 추가 됨 -->
+                        <!-- 프로필 -->
+                        <div class="wrap_member ui_dropdown none right">
+                            <button class="drop_btn profile"></button><!-- 프로필 버튼 -->
+                            <ul class="drop_cont list">
+                                <li><a href="#">비밀번호변경</a></li>
+                                <li><a href="#">로그아웃</a></li>
+                            </ul>
+                        </div>
+                        <!-- // 프로필 -->
+                    </div>
+                </div>
+            </article>
+            <!-- // 컨텐츠 상단 고정 영역 -->
+            <!-- 컨텐츠 영역 -->
+            <article class="cont">
+                <div class="wrap_inner">
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h2>기본 box</h2>
+                            <div class="code">
+                                <pre>
+&lt;div class="cont_row"&gt;
+    &lt;section class="<span class="hlight">box</span>"&gt;
+        컨텐츠 내용
+    &lt;/section&gt;
+&lt;/div&gt;</pre>
+                            </div>
+                            <ul class="list_txt mt8">
+                                <li>.cont_row 안에 컨텐츠를 감싸는 div(.box)가 들어가 있게 되어있음.</li>
+                                <li>.cont_row의 display는 flex로 bootstrap .row와 구조가 동일하다.</li>
+                                <li>.cont_row와 다른 .cont_row 사이에 간격은 16px이다.</li>
+                                <li>사이즈를 나누는 클래스는 3가지가 있다. <br>- .box : width 100% <br>- .div1 : .cont_row 영역 width 1146px 기준 370px(대략 영역의 32%) <br>- .div2 : .cont_row 영역 width 1146px 기준 760px(대략 영역의 66%)</li>
+                                <li>class box는 단독으로 사용할 수 있지만 class div1, div2의 경우는 box와 함께 사용</li>
+                                <li>class box 형태 내 지정 된 padding은 따로 없으며 각 클래스에 전용 클래스를 붙여 각각의 스타일을 적용할 수 있게 함.</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="cont_row">
+                        <section class="box greeting div1">
+                            <h2>영역이 둘로 나뉜 구조</h2>
+                            <div class="code">
+                                <pre>
+&lt;div class="cont_row"&gt;
+    &lt;div class="<span class="hlight">box</span> <span class="hlight2">div1</span>"&gt;
+        div1 컨텐츠 내용
+    &lt;/div&gt;
+    &lt;div class="<span class="hlight">box</span> <span class="hlight2">div2</span>"&gt;
+        div2 컨텐츠 내용
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                            </div>
+                        </section>
+                        <section class="box greeting div2">
+                            <ul class="list_txt mt8">
+                                <li>둘로 나뉜 구조가 되었을 경우 간격은 16px 이다.</li>
+                                <li>박스가 작은 사이즈(.div1)의 넓이는 .cont_row 너비가 1146px 기준으로 370px, <br>박스가 큰 사이즈(.div1)의 넓이는 .cont_row 너비가 1146px 기준으로 760px이다. <br>둘을 절반으로 나누는 사이즈는 따로 없다.</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h2>list element에서 주로 사용한 layout</h2>
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <ul class="list col2">
+                                        <li style="border:1px solid #d2d2d2">col2 list 1</li>
+                                        <li style="border:1px solid #d2d2d2">col2 list 2</li>
+                                    </ul>
+                                    <div class="code">
+                                        <pre>
+&lt;ul class="list <span class="hlight">col2</span>"&gt;
+    &lt;li&gt;col2 list 1&lt;/li&gt;
+    &lt;li&gt;col2 list 2&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <ul class="list col3">
+                                        <li style="border:1px solid #d2d2d2">col3 list 1</li>
+                                        <li style="border:1px solid #d2d2d2">col3 list 2</li>
+                                        <li style="border:1px solid #d2d2d2">col3 list 3</li>
+                                    </ul>
+                                    <div class="code">
+                                        <pre>
+&lt;ul class="list <span class="hlight">col3</span>"&gt;
+    &lt;li&gt;col3 list 1&lt;/li&gt;
+    &lt;li&gt;col3 list 2&lt;/li&gt;
+    &lt;li&gt;col3 list 3&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                                    </div>
+                                </div>
+                                <ul class="list_txt mt16">
+                                    <li>box 구조와는 다르게 따로 간격이 없다.</li>
+                                    <li>사용된 화면을 볼 수 있는 단적인 예는 HR담당 버튼 클릭 시 popup 내에 사용되었다.</li>
+                                    <li>예로서 ul > li element를 사용했지만 해당 구조가 아니어도 사용 가능하다.</li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h2>기타</h2>
+                            <h3 class="tit1 mt0">gnb</h3>
+                            <div class="code">
+                                <pre>
+&lt;nav class="gnb"&gt;
+    &lt;ul&gt;
+        &lt;li class="<span class="hlight3">auth</span> ui_accordion"&gt;&lt;!-- 임직원공통에만 'default' / 권한에 따라 달라지는 메뉴에는 'auth' Class 부여 --&gt;
+            &lt;a class="depth1 acco_btn"&gt;&lt;i&gt;admin_panel_settings&lt;/i&gt;최고관리자&lt;i class="more"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="<span class="hlight3">default</span> <span class="hlight4">ui_accordion</span>"&gt;&lt;!-- 임직원공통에만 'default' / 권한에 따라 달라지는 메뉴에는 'auth' Class 부여 --&gt;
+            &lt;a class="<span class="hlight2">depth1</span> <span class="hlight4">acco_btn</span>"&gt;&lt;i&gt;person&lt;/i&gt;임직원공통&lt;i class="more"&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;ul class="<span class="hlight2">depth2</span> <span class="hlight4">acco_cont</span>"&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;&lt;i&gt;desktop_windows&lt;/i&gt;인사&lt;/a&gt;
+                    &lt;div class="<span class="hlight">subNav</span>"&gt;
+                        &lt;ul class="<span class="hlight2">depth3</span>"&gt;
+                            &lt;li class="ui_accordion"&gt;
+                                &lt;a href="#" class="acco_btn"&gt;개인급여관리&lt;i class="more"&gt;&lt;/i&gt;&lt;/a&gt; 
+                                &lt;ul class="<span class="hlight2">depth4</span> acco_cont"&gt;
+                                    &lt;li class="ui_accordion type2"&gt;
+                                        &lt;a href="#" class="acco_btn"&gt;개인급여관리&lt;i class="more"&gt;&lt;/i&gt;&lt;/a&gt;
+                                        &lt;ul class="<span class="hlight2">depth5</span> acco_cont"&gt;
+                                            &lt;li&gt;&lt;a href="#"&gt;연봉계약서&lt;/a&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;a href="#"&gt;개인별급여내역&lt;/a&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;a href="#"&gt;기간별급여내역&lt;/a&gt;&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class="NavClose"&gt;
+                &lt;div class="inner"&gt;
+                    &lt;button class="open on"&gt;&lt;span&gt;펼치기&lt;/span&gt;&lt;/button&gt;
+                    &lt;button&gt;&lt;span&gt;닫기&lt;/span&gt;&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+                            </div>
+                            <ul class="list_txt mt8">
+                                <li>임직원 공통이 아닌 권한이 두개 이상일 경우 전체를 감싼 클래스(.wrap)에 addAuth class를 추가되어야 한다.</li>
+                                <li>구조 안에 구조가 오픈 되어야 하는 경우에는 accordion 메뉴를 사용</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </article>
+            <!-- // 컨텐츠 영역 -->
+        </div>
+        <!-- // container -->
+    </div>
+    <!-- HR담당자 팝업 -->
+    <div class="popup modal mid" id="hrmodal"><!-- popup 클래스에 사이즈 조절 클래스는 3가지(sml/mid/lar) -->
+        <div class="popup_inner modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="title">HR담당자</h1>
+                </div>
+                <div class="modal-body">
+                    <ul class="list col2">
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                            <div class="info">
+                                <p class="name">김이수</p>
+                                <p class="roll">급여</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"></div><!-- 이미지 없을 떄 -->
+                            <div class="info">
+                                <p class="name">이희수</p>
+                                <p class="roll">인사</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                            <div class="info">
+                                <p class="name">김수찬</p>
+                                <p class="roll">복리후생</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                            <div class="info">
+                                <p class="name">이수지</p>
+                                <p class="roll">근태,조직</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="butn hbold" data-dismiss="modal" aria-label="Close"><span>닫기</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // HR담당자 팝업 -->
+</body>
+<!-- 외부파일 스크립트 -->
+<script src="../../src/plugins/jQuery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="../../src/plugins/jQuery-slimScroll-1.3.8/jquery.slimscroll.min.js"></script>
+<script src="../../src/plugins/bootstrap-4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../src/plugins/jsCalendar_v1.4.4/source/jsCalendar.min.js"></script>
+<script src="../../src/plugins/jsCalendar_v1.4.4/source/jsCalendar.lang.ko.js"></script>
+<script src="../../src/js/common.js"></script>
+<!-- // 외부파일 스크립트 -->
+</html>

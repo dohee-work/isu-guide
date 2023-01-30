@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>guide</title>
+    <link rel="stylesheet" href="../../src/css/external.css"><!-- 외부 css -->
+    <link rel="stylesheet" href="../../portal/assets/css/portal_style.css"><!-- 포털 css 링크 -->
+    <link rel="stylesheet" href="../guide_style.css"><!-- 가이드 전용 css 링크 -->
+</head>
+<body>
+    <div class="wrap"><!-- 권한 2개 이상일 경우 class="addAuth" 를 해당 위치에 붙임 -->
+        <!-- header -->
+        <header class="header">
+            <h1><a href="../guide.html" class="logo"><span class="blind">ISU</span></a></h1>
+            <!-- gnb -->
+            <nav class="gnb">
+                <ul>
+                    <li class="default ui_accordion"><!-- 임직원공통에만 'default' / 권한에 따라 달라지는 메뉴에는 'auth' Class 부여 -->
+                        <a class="depth1 acco_btn"><i>person</i>임직원공통<i class="more"></i></a>
+                        <ul class="depth2 acco_cont" style="display: block">
+                            <li>
+                                <a href="layout.html"><i>web</i>Layout</a>
+                            </li>
+                            <li>
+                                <a href="button.html"><i>touch_app</i>Button</a>
+                            </li>
+                            <li>
+                                <a href="form.html"><i>fact_check</i>Form</a>
+                            </li>
+                            <li>
+                                <a href="input.html"><i>check_box</i>Input</a>
+                            </li>
+                            <li>
+                                <a href="list.html"><i>format_list_bulleted</i>List</a>
+                            </li>
+                            <li>
+                                <a href="tab.html"><i>tab</i>Tab</a>
+                            </li>
+                            <li>
+                                <a href="table.html"><i>table_view</i>Table</a>
+                            </li>
+                            <li>
+                                <a href="popup.html"><i>web_asset</i>Popup</a>
+                            </li>
+                            <li>
+                                <a href="etc.html"><i>more</i>Etc.</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- // gnb -->
+            <div class="info_hr">
+                <button class="btn_hr butn" data-toggle="modal" data-target="#hrmodal"><span><i>outlined_flag</i>HR담당자</span></button>
+            </div>
+        </header>
+        <!-- // header -->
+        <!-- container -->
+        <div class="content main"><!-- 메인페이지에만 해당 클래스에 main 클래스 추가 -->
+            <!-- 컨텐츠 상단 고정 영역 -->
+            <article class="cont_header">
+                <div class="wrap_inner clear">
+                    <div class="fl">
+                        <!-- 검색어 입력영역 -->
+                        <div class="wrap_search">
+                            <input type="text" placeholder="임직원 검색">
+                            <button class="btn_search material-icons-outlined"><span>search</span><span class="hide">검색</span></button>
+                        </div>
+                        <!-- // 검색어 입력영역 -->
+                    </div>
+                    <div class="fr util_list">
+                        <button class="butn_ico"><span>lock</span><span class="hide">화면잠금</span></button>
+                        <a href="#" class="butn_ico"><span>assignment</span><span class="hide">게시판</span></a>
+                        <button class="butn_ico noti on"><span>notifications</span><span class="hide">알림</span></button><!-- 알림이 있을 경우 class="on"이 추가 됨 -->
+                        <!-- 프로필 -->
+                        <div class="wrap_member ui_dropdown none right">
+                            <button class="drop_btn profile"></button><!-- 프로필 버튼 -->
+                            <ul class="drop_cont list">
+                                <li><a href="#">비밀번호변경</a></li>
+                                <li><a href="#">로그아웃</a></li>
+                            </ul>
+                        </div>
+                        <!-- // 프로필 -->
+                    </div>
+                </div>
+            </article>
+            <!-- // 컨텐츠 상단 고정 영역 -->
+            <!-- 컨텐츠 영역 -->
+            <article class="cont">
+                <div class="wrap_inner">
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h2>기타 Component</h2>
+                            <h3 class="tit1 mt0">text style</h3>
+                            <h4 class="tit2">color</h4>
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <p class="d-block f_color1">font color 1 class 의 f_color1 입니다</p>
+                                    <p class="d-block f_color2">font color 2 class 의 f_color2 입니다</p>
+                                    <p class="d-block f_color3">font color 3 class 의 f_color3 입니다</p>
+                                    <p class="d-block f_color4">font color 4 class 의 f_color4 입니다</p>
+                                </div>
+                                <div class="col">
+                                    <div class="code mt0">
+                                        <pre>&lt;p class="f_color1"&gt;font color 1 class 의 f_color1 입니다&lt;/p&gt;
+                                            &lt;p class="f_color2"&gt;font color 2 class 의 f_color2 입니다&lt;/p&gt;
+                                            &lt;p class="f_color3"&gt;font color 3 class 의 f_color3 입니다&lt;/p&gt;
+                                            &lt;p class="f_color4"&gt;font color 4 class 의 f_color4 입니다&lt;/p&gt;</pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="tit2">말줄임</h4>
+                            <h5 class="tit3">한 줄 말줄임</h5>
+                            <p class="d-block ellipsis">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <div class="code">
+                                <pre>&lt;p class="<span class="hlight">ellipsis</span>"&gt;Lorem Ipsum is simply dummy text of the printing and&lt;/p&gt;</pre>
+                            </div>
+                            <h5 class="tit3">두 줄 말줄임</h5>
+                            <div class="ellipsis line2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                            <div class="code">
+                                <pre>&lt;p class="<span class="hlight">ellipsis</span> <span class="hlight2">line2</span>"&gt;Lorem Ipsum is simply dummy text of the printing and&lt;/p&gt;</pre>
+                            </div>
+                            <h4 class="tit2">text white space</h4>
+                            <p class="d-block wsNor">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <div class="code">
+                                <pre>&lt;p class="<span class="hlight">wsNor</span>"&gt;Lorem Ipsum is simply dummy text of the printing and&lt;/p&gt;</pre>
+                            </div>
+                            <p class="d-block wsNowrap">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <div class="code">
+                                <pre>&lt;p class="<span class="hlight2">wsNowrap</span>"&gt;Lorem Ipsum is simply dummy text of the printing and&lt;/p&gt;</pre>
+                            </div>
+                            <p class="d-block wsPre">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <div class="code">
+                                <pre>&lt;p class="<span class="hlight3">wsPre</span>"&gt;Lorem Ipsum is simply dummy text of the printing and&lt;/p&gt;</pre>
+                            </div>
+                            <h4 class="tit2">정의내용 표시</h4>
+                            <h5 class="tit3">기본</h5>
+                            <dl class="desc">
+                                <dt>이수시스템은</dt>
+                                <dd>이수그룹 계열사다. 이수시스템은 1995년 창립 이래, IT컨설팅, 시스템 통합, IT아웃소싱 및 솔루션 개발 사업을 주력으로 기업 환경에 최적화된 IT시스템을 개발해오고 있다.</dd>
+                            </dl>
+                            <div class="code">
+                                <pre>&lt;dl class="<span class="hlight">desc</span>"&gt;
+    &lt;dt&gt;이수시스템은&lt;/dt&gt;
+    &lt;dd&gt;이수그룹 계열사다. 이수시스템은 1995년 창립 이래, IT컨설팅, 시스템 통합, IT아웃소싱 및 솔루션 개발 사업을 주력으로 기업 환경에 최적화된 IT시스템을 개발해오고 있다.&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+                            </div>
+                            <h5 class="tit3">inline style</h5>
+                            <dl class="desc inline">
+                                <dt>이수시스템은</dt>
+                                <dd>이수그룹 계열사다. 이수시스템은 1995년 창립 이래, IT컨설팅, 시스템 통합, IT아웃소싱 및 솔루션 개발 사업을 주력으로 기업 환경에 최적화된 IT시스템을 개발해오고 있다.</dd>
+                            </dl>
+                            <div class="code">
+                                <pre>&lt;dl class="<span class="hlight">desc</span> <span class="hlight2">inline</span>"&gt;
+    &lt;dt&gt;이수시스템은&lt;/dt&gt;
+    &lt;dd&gt;이수그룹 계열사다. 이수시스템은 1995년 창립 이래, IT컨설팅, 시스템 통합, IT아웃소싱 및 솔루션 개발 사업을 주력으로 기업 환경에 최적화된 IT시스템을 개발해오고 있다.&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+                            </div>
+                            <h4 class="tit2">필수 항목 check</h4>
+                            <dl class="desc">
+                                <dt class="req">이수시스템은</dt>
+                                <dd>이수그룹 계열사다. 이수시스템은 1995년 창립 이래, IT컨설팅, 시스템 통합, IT아웃소싱 및 솔루션 개발 사업을 주력으로 기업 환경에 최적화된 IT시스템을 개발해오고 있다.</dd>
+                            </dl>
+                            <div class="code">
+                                <pre>&lt;dl class="desc"&gt;
+    &lt;dt class="<span class="hlight">req</span>"&gt;이수시스템은&lt;/dt&gt;
+    &lt;dd&gt;이수그룹 계열사다. 이수시스템은 1995년 창립 이래, IT컨설팅, 시스템 통합, IT아웃소싱 및 솔루션 개발 사업을 주력으로 기업 환경에 최적화된 IT시스템을 개발해오고 있다.&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="cont_row">
+                        <section class="box greeting main">
+                            <h3 class="tit1 mt0">content hover에 따른 content visable 변경</h3>
+                            <p class="d-block">main에서 할일 리스트에 마우스를 올릴 때 보여지는 정보가 변경 됨</p>
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <a href="#" class="butn mt24">
+                                        내용보기
+                                        <span class="nothover">처음에는 보여지나 hover가 되면 안보여집니다.</span>
+                                        <span class="hover">처음에는 안 보여지나 hover가 되면 보여집니다.</span>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <div class="code">
+                                        <pre>
+&lt;a href="#" class="butn mt24"&gt;
+    내용보기
+    &lt;span class="<span class="hlight2">nothover</span>"&gt;처음에는 보여지나 <span class="hlight2">hover가 되면 안보여집니다.</span>&lt;/span&gt;
+    &lt;span class="<span class="hlight">hover</span>"&gt;처음에는 안 보여지나 <span class="hlight">hover가 되면 보여집니다.</span>&lt;/span&gt;
+&lt;/a&gt;
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h3 class="tit1 mt0">Accordion 버튼</h3>
+                            <div class="row">
+                                <div class="col-4">
+                                    <h4 class="tit2 mt0">기본 스타일</h4>
+                                    <div class="ui_accordion">
+                                        <a href="#" class="acco_btn">Accordion 버튼<i class="more"></i></a>
+                                        <ul class="acco_cont">
+                                            <li><a href="#">Accordion 메뉴 1</a></li>
+                                            <li><a href="#">Accordion 메뉴 2</a></li>
+                                            <li><a href="#">Accordion 메뉴 3</a></li>
+                                            <li><a href="#">Accordion 메뉴 4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="code">
+                                    <pre>
+&lt;div class="ui_accordion"&gt;
+    &lt;a href="#" class="acco_btn"&gt;Accordion 버튼&lt;i class="more"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;ul class="acco_cont"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Accordion 메뉴 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Accordion 메뉴 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Accordion 메뉴 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Accordion 메뉴 4&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <h4 class="tit2">스타일 2</h4>
+                                    <div class="ui_accordion type2">
+                                        <a href="#" class="acco_btn">Accordion type2 버튼<i class="more"></i></a>
+                                        <ul class="acco_cont">
+                                            <li><a href="#">Accordion type2 메뉴 1</a></li>
+                                            <li><a href="#">Accordion type2 메뉴 2</a></li>
+                                            <li><a href="#">Accordion type2 메뉴 3</a></li>
+                                            <li><a href="#">Accordion type2 메뉴 4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="code">
+                                    <pre>
+&lt;div class="ui_accordion <span class="hlight">type2</span>"&gt;
+    &lt;a href="#" class="acco_btn"&gt;Accordion type2 버튼&lt;i class="more"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;ul class="acco_cont"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Accordion type2 메뉴 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Accordion type2 메뉴 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Accordion type2 메뉴 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Accordion type2 메뉴 4&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>기본 스타일에서 class="type2"가 추가 되면 위와 같은 스타일이 된다.</p>
+                        </section>
+                    </div>    
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h3 class="tit1 mt0">Dropdown 버튼</h3>
+                            <ul class="list_txt mt8">
+                                <li>모든 형태의 드롭다운 class="ui_dropdown"에 해당 클래스가 붙으면 아래와 같이 변화함<br>
+                                - type2 : 기본 버튼의 height가 32px 에서 40px로 변경<br>
+                                - right : 드롭다운 선택영역 box가 오른쪽으로 붙어서 열림
+                                </li>
+                            </ul>
+                            <h4 class="tit2 mb0">기본</h4>
+                            <div class="row row-cols-2">
+                                <div class="col">
+                                    <h5 class="tit3">좌측정렬</h5>
+                                    <div class="ui_dropdown">
+                                        <!-- 드롭다운 버튼 -->
+                                        <button class="drop_btn material-icons-outlined">
+                                            <span>옵션1</span>
+                                        </button>
+                                        <!-- // 드롭다운 버튼 -->
+                                        <!-- 드롭다운 선택영역 -->
+                                        <ul class="drop_cont list">
+                                            <li><a href="#">옵션1</a></li>
+                                            <li><a href="#">옵션2</a></li>
+                                            <li><a href="#">옵션3</a></li>
+                                        </ul>
+                                        <!-- // 드롭다운 선택영역 -->
+                                    </div>
+                                    <div class="code">
+                                        <pre>
+&lt;div class="ui_dropdown"&gt;
+    &lt;!-- 드롭다운 버튼 --&gt;
+    &lt;button class="drop_btn material-icons-outlined"&gt;
+        &lt;span&gt;전체&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;!-- // 드롭다운 버튼 --&gt;
+    &lt;!-- 드롭다운 선택영역 --&gt;
+    &lt;ul class="drop_cont list"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;옵션1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;옵션2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;옵션3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;!-- // 드롭다운 선택영역 --&gt;
+&lt;/div&gt;</pre>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h5 class="tit3">우측정렬</h5>
+                                    <div class="ui_dropdown right"><!-- 드롭다운 버튼 클래스에 right 클래스가 붙으면 list div가 우측으로 붙은 방향으로 열림 -->
+                                        <!-- 드롭다운 버튼 -->
+                                        <button class="drop_btn material-icons-outlined">
+                                            <span>옵션1</span>
+                                        </button>
+                                        <!-- // 드롭다운 버튼 -->
+                                        <!-- 드롭다운 선택영역 -->
+                                        <ul class="drop_cont list">
+                                            <li><a href="#">옵션1</a></li>
+                                            <li><a href="#">옵션2</a></li>
+                                            <li><a href="#">옵션3</a></li>
+                                        </ul>
+                                        <!-- // 드롭다운 선택영역 -->
+                                    </div>
+                                    <div class="code">
+                                        <pre>
+&lt;div class="ui_dropdown <span class="hlight">right</span>"&gt;
+    &lt;!-- 드롭다운 버튼 --&gt;
+    &lt;button class="drop_btn material-icons-outlined"&gt;
+        &lt;span&gt;전체&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;!-- // 드롭다운 버튼 --&gt;
+    &lt;!-- 드롭다운 선택영역 --&gt;
+    &lt;ul class="drop_cont list"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;옵션1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;옵션2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;옵션3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;!-- // 드롭다운 선택영역 --&gt;
+&lt;/div&gt;</pre>
+                                    </div>
+                                    <p>기본 구조에 <span class="hlight">class="right" 라는 클래스를 추가</span>해서 사용</p>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="tit2">날짜 선택형</h4>
+                                <div class="ui_dropdown date">
+                                    <!-- 드롭다운 버튼 -->
+                                    <button class="drop_btn material-icons-outlined">
+                                        <span><span class="year">2021</span>-<span class="month">08</span></span>
+                                    </button>
+                                    <!-- // 드롭다운 버튼 -->
+                                    <!-- 드롭다운 선택영역 -->
+                                    <div class="drop_cont">
+                                        <div class="clearfix">
+                                            <ul class="list year">
+                                                <li><a>2016</a></li>
+                                                <li><a>2017</a></li>
+                                                <li><a>2018</a></li>
+                                                <li><a>2019</a></li>
+                                                <li><a>2020</a></li>
+                                                <li><a>2021</a></li>
+                                                <li><a>2022</a></li>
+                                                <li><a>2023</a></li>
+                                                <li><a>2024</a></li>
+                                                <li><a>2025</a></li>
+                                            </ul>
+                                            <ul class="list month">
+                                                <li><a>01</a></li>
+                                                <li><a>02</a></li>
+                                                <li><a>03</a></li>
+                                                <li><a>04</a></li>
+                                                <li><a>05</a></li>
+                                                <li><a>06</a></li>
+                                                <li><a>07</a></li>
+                                                <li><a>08</a></li>
+                                                <li><a>09</a></li>
+                                                <li><a>10</a></li>
+                                                <li><a>11</a></li>
+                                                <li><a>12</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="drop_cont_btn">
+                                            <button type="button" class="butn outline cancel">취소</button>
+                                            <button type="button" class="butn deepblue comfirm">저장</button>
+                                        </div>
+                                    </div>
+                                    <!-- // 드롭다운 선택영역 -->
+                                </div>
+                                <div class="code">
+                                <pre>
+&lt;div class="ui_dropdown date"&gt;
+    &lt;!-- 드롭다운 버튼 --&gt;
+    &lt;button class="drop_btn"&gt;
+        &lt;span&gt;&lt;span class="year"&gt;2021&lt;/span&gt;-&lt;span class="month"&gt;08&lt;/span&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;!-- // 드롭다운 버튼 --&gt;
+    &lt;!-- 드롭다운 선택영역 --&gt;
+    &lt;div class="drop_cont"&gt;
+        &lt;div class="clearfix"&gt;
+            &lt;ul class="list year"&gt;
+                &lt;li&gt;&lt;a&gt;2016&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;2017&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;2018&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;2019&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;2020&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;2021&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;2022&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;2023&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;2024&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;2025&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul class="list month"&gt;
+                &lt;li&gt;&lt;a&gt;01&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;02&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;03&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;04&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;05&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;06&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;07&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;08&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;09&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;10&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;11&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a&gt;12&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class="drop_cont_btn"&gt;
+            &lt;button type="button" class="butn outline cancel"&gt;취소&lt;/button&gt;
+            &lt;button type="button" class="butn deepblue comfirm"&gt;저장&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- // 드롭다운 선택영역 --&gt;
+&lt;/div&gt;</pre>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="tit2">복합형</h4>
+                                <div class="ui_dropdown">
+                                    <!-- 드롭다운 버튼 -->
+                                    <button class="drop_btn material-icons-outlined">
+                                        <span>전체기간</span>
+                                    </button>
+                                    <!-- // 드롭다운 버튼 -->
+                                    <!-- 드롭다운 선택영역 -->
+                                    <div class="drop_cont multi_sel_date">
+                                        <ul>
+                                            <li><a href="#">전체기간</a></li>
+                                            <li><a href="#">1일</a></li>
+                                            <li><a href="#">1주</a></li>
+                                            <li><a href="#">1개월</a></li>
+                                            <li><a href="#">3개월</a></li>
+                                        </ul>
+                                        <div class="pickDate">
+                                            <dl>
+                                                <dt>기간입력</dt>
+                                                <dd class="sel_date">
+                                                    <div class="inputGroup date">
+                                                        <button type="button" class="butn_ico" onclick="sampleBtn(this)" inp="normal_calendar1"><span>date_range</span></button>
+                                                        <input type="text" id="normal_calendar1" placeholder="시작일">
+                                                    </div>
+                                                    <div class="inputGroup date">
+                                                        <button type="button" class="butn_ico" onclick="sampleBtn(this)" inp="normal_calendar2"><span>date_range</span></button>
+                                                        <input type="text" id="normal_calendar2" placeholder="종료일">
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <button class="butn block black1">설정</button>
+                                        </div>
+                                    </div>
+                                    <!-- // 드롭다운 선택영역 -->
+                                </div>
+                                <div class="code">
+                                    <pre>
+&lt;div class="ui_dropdown"&gt;
+    &lt;!-- 드롭다운 버튼 --&gt;
+    &lt;button class="drop_btn material-icons-outlined"&gt;
+        &lt;span&gt;전체기간&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;!-- // 드롭다운 버튼 --&gt;
+    &lt;!-- 드롭다운 선택영역 --&gt;
+    &lt;div class="drop_cont <span class="hlight">multi_sel_date</span>"&gt;&lt;-- <span class="hlight">해당 클래스가 추가 되어야 형태가 유지됨</span> --&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;전체기간&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;1일&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;1주&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;1개월&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;3개월&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class="pickDate"&gt;
+            &lt;dl&gt;
+                &lt;dt&gt;기간입력&lt;/dt&gt;
+                &lt;dd class="sel_date"&gt;
+                    &lt;div class="inputGroup date"&gt;
+                        &lt;button type="button" class="butn_ico" onclick="sampleBtn(this)" inp="normal_calendar1"&gt;&lt;span&gt;date_range&lt;/span&gt;&lt;/button&gt;
+                        &lt;input type="text" id="normal_calendar1" placeholder="시작일"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="inputGroup date"&gt;
+                        &lt;button type="button" class="butn_ico" onclick="sampleBtn(this)" inp="normal_calendar2"&gt;&lt;span&gt;date_range&lt;/span&gt;&lt;/button&gt;
+                        &lt;input type="text" id="normal_calendar2" placeholder="종료일"&gt;
+                    &lt;/div&gt;
+                &lt;/dd&gt;
+            &lt;/dl&gt;
+            &lt;button class="butn block black1"&gt;설정&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- // 드롭다운 선택영역 --&gt;
+&lt;/div&gt;</pre>
+                                </div>
+                            </div>
+                        </section>
+                    </div>    
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h3 class="tit1 mt0">Progress bar</h3>
+                            <h4 class="tit2">배경 영역이 있는 스타일</h4>
+                            <p class="mb8">progress bar의 너비를 class="bar"가 있는 영역에 인라인으로 넣어줘야 한다.</p>
+                            <div class="code">
+                                <pre>
+&lt;div class="progress"&gt;
+    &lt;div class="<span class="hlight4">bar</span> <span class="hlight3">green</span> / <span class="hlight2">blue</span> / <span class="hlight">yellow</span>" style="width: calc((30 / 40) * 100%)"&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+                            </div>
+                            <h5 class="tit3">green</h5>
+                            <div class="progress my-2">
+                                <div class="bar green" style="width: calc((30 / 40) * 100%)"></div>
+                            </div>
+                            <h5 class="tit3">blue</h5>
+                            <div class="progress my-2">
+                                <div class="bar blue" style="width: calc((30 / 40) * 100%)"></div><!-- bar 클래스에 class="green" 추가 시 초록색의 진행바가 보임 / 해당 dom에 인라인으로 가로 사이즈 입력시 progress 바가 보임 -->
+                            </div>
+                            <h5 class="tit3">yellow</h5>
+                            <div class="progress my-2">
+                                <div class="bar yellow" style="width: calc((30 / 40) * 100%)"></div>
+                            </div>
+                            <h4 class="tit2">배경 영역이 없는 스타일</h4>
+                            <div class="code">
+                                <pre>
+&lt;div class="progress <span class="hlight4">bar</span> <span class="hlight3">green</span> / <span class="hlight2">blue</span> / <span class="hlight">yellow</span>" style="width: calc((40 / 40) * 59.35%)"&gt;&lt;/div&gt;</pre>
+                            </div>
+                            <h5 class="tit3">green</h5>
+                            <div class="progress bar green" style="width: calc((40 / 40) * 59.35%)"></div>
+                            <h5 class="tit3">blue</h5>
+                            <div class="progress bar blue" style="width: calc((40 / 40) * 59.35%)"></div>
+                            <h5 class="tit3">yellow</h5>
+                            <div class="progress bar yellow" style="width: calc((40 / 40) * 59.35%)"></div>
+                        </section>
+                    </div>    
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h3 class="tit1 mt0">Pagination</h3>
+                            <div class="pagination">
+                                <a href="#" class="butn prev"><span class="hide">이전</span><i></i></a>
+                                <a href="#" class="here">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#">7</a>
+                                <a href="#">8</a>
+                                <a href="#">9</a>
+                                <a href="#">10</a>
+                                <a href="#" class="butn next"><span class="hide">다음</span><i></i></a>
+                            </div>
+                            <div class="code">
+                            <pre>
+&lt;div class="pagination"&gt;
+    &lt;a href="#" class="butn prev"&gt;&lt;span class="hide"&gt;이전&lt;/span&gt;&lt;i&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href="#" <span class="hlight">class="here"</span>&gt;1&lt;/a&gt; /* 현재페이지 표시 할 때는 here 클래스 부여 */
+    &lt;a href="#"&gt;2&lt;/a&gt;
+    &lt;a href="#"&gt;3&lt;/a&gt;
+    &lt;a href="#"&gt;4&lt;/a&gt;
+    &lt;a href="#"&gt;5&lt;/a&gt;
+    &lt;a href="#"&gt;6&lt;/a&gt;
+    &lt;a href="#"&gt;7&lt;/a&gt;
+    &lt;a href="#"&gt;8&lt;/a&gt;
+    &lt;a href="#"&gt;9&lt;/a&gt;
+    &lt;a href="#"&gt;10&lt;/a&gt;
+    &lt;a href="#" class="butn next"&gt;&lt;span class="hide"&gt;다음&lt;/span&gt;&lt;i&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;</pre>
+                            </div>
+                        </section>
+                    </div>    
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h3 class="tit1 mt0">파일 표기</h3>
+                            <ul class="list_txt mt8">
+                                <li>주로 파일이 업로드 될 때 파일명 앞에 아이콘으로 파일 구분을 용이하게 함.</li>
+                                <li>Download list(list page에서 확인 가능)에 많이 사용된다.</li>
+                                <li>정의시 class="file"이 반드시 붙어야 아이콘 표기가 가능하다.</li>
+                            </ul>
+                            <div class="mt8">
+                                <a href="#" class="butn outline file pdf"><span class="fileName">근태현황.pdf(213.9KB)</span></a>
+                            </div>
+                            <div class="code">
+                                &lt;a href="#" class="butn <span class="hlight">file</span> <span class="hlight2">pdf</span>"&gt;&lt;span class="<span class="hlight3">fileName</span>"&gt;근태현황.pdf(213.9KB)&lt;/span&gt;&lt;/a&gt;
+                            </div>
+                            <p>위의 내용은 예시이므로 비슷한 구조로 정의 된다면 다른 유형에도 사용 가능하다.</p>
+                            <h4 class="tit2">파일 아이콘</h4>
+                            <p>확장자 명에 따라 클래스가 아래와 같이 달라져야 한다.</p>
+                            <ul class="list_txt mt8">
+                                <li><span href="#" class="file bmp"><span class="fileName"></span></span> bmp : 비트맵 파일</li>
+                                <li><span href="#" class="file doc"><span class="fileName"></span></span> doc : Word 파일(.doc / .docs)</li>
+                                <li><span href="#" class="file img"><span class="fileName"></span></span> img : 이미지 파일</li>
+                                <li><span href="#" class="file pdf"><span class="fileName"></span></span> pdf : PDF 파일</li>
+                                <li><span href="#" class="file ppt"><span class="fileName"></span></span> ppt : 파워포인트 파일(.ppt / .pptx 등)</li>
+                                <li><span href="#" class="file xls"><span class="fileName"></span></span> xls : 엑셀 파일(.xls / .xlsx 등)</li>
+                                <li><span href="#" class="file zip"><span class="fileName"></span></span> zip : 압축 파일</li>
+                            </ul>
+                        </section>
+                    </div>    
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h3 class="tit1 mt0">직원 정보 상세 스타일</h3>
+                            <ul class="list_txt pb-2">
+                                <li>스타일은 총 3가지가 있고 기본 스타일은 staffcard 이며 기본 스타일에 type1 / type2 / type3를 붙여 사용한다.</li>
+                                <li>type3를 제외하곤 기본 형태는 아래와 같다.</li>
+                            </ul>
+                            <div class="code">
+                                <pre>
+&lt;div class="staffcard <span class="hlight2">type1 / type2</span>"&gt;
+    &lt;div class="img"&gt;&lt;img src="../../src/images/KimISU.JPG" alt=""&gt;&lt;/div&gt;
+    &lt;div class="info"&gt;
+        &lt;p class="name"&gt;김이수&lt;/p&gt;
+        &lt;p class="roll"&gt;급여&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;ul class="detail"&gt;
+        &lt;li&gt;&lt;dl&gt;&lt;dt&gt;이메일&lt;/dt&gt;&lt;dd&gt;isukim@isu.co.kr&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;dl&gt;&lt;dt&gt;사무실 전화&lt;/dt&gt;&lt;dd&gt;02-590-1234&lt;/dd&gt;&lt;/dl&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</pre>
+                            </div>
+                            <div class="row row-cols-3">
+                                <div class="col">
+                                    <h4 class="tit2">.staffcard .type1</h4>
+                                    <div class="staffcard type1">
+                                        <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                                        <div class="info">
+                                            <p class="name">김이수</p>
+                                            <p class="roll">급여</p>
+                                        </div>
+                                        <ul class="detail">
+                                            <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                            <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h4 class="tit2">.staffcard .type2</h4>
+                                    <div class="staffcard type2">
+                                        <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                                        <div class="info">
+                                            <p class="name">김이수</p>
+                                            <p class="roll">급여</p>
+                                        </div>
+                                        <ul class="detail">
+                                            <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                            <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h4 class="tit2">.staffcard .type3</h4>
+                                    <p class="mb-2">리스트 형태로 아래와 같이 보여질 때 주로 사용된다.</p>
+                                    <ul class="staffcard type3">
+                                        <li><span class="name">김이수</span><span class="work_id">s11445</span><span class="rank">대리</span></li>
+                                    </ul>
+                                    <div class="code">
+                                        <pre>&lt;ul class="staffcard type3"&gt;
+    &lt;li&gt;
+        &lt;span class="name"&gt;김이수&lt;/span&gt;
+        &lt;span class="work_id"&gt;s11445&lt;/span&gt;
+        &lt;span class="rank"&gt;대리&lt;/span&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </article>
+            <!-- // 컨텐츠 영역 -->
+        </div>
+        <!-- // container -->
+    </div>
+    <!-- HR담당자 팝업 -->
+    <div class="popup modal mid" id="hrmodal"><!-- popup 클래스에 사이즈 조절 클래스는 3가지(sml/mid/lar) -->
+        <div class="popup_inner modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="title">HR담당자</h1>
+                </div>
+                <div class="modal-body">
+                    <ul class="list col2">
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                            <div class="info">
+                                <p class="name">김이수</p>
+                                <p class="roll">급여</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"></div><!-- 이미지 없을 떄 -->
+                            <div class="info">
+                                <p class="name">이희수</p>
+                                <p class="roll">인사</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                            <div class="info">
+                                <p class="name">김수찬</p>
+                                <p class="roll">복리후생</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                            <div class="info">
+                                <p class="name">이수지</p>
+                                <p class="roll">근태,조직</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="butn hbold" data-dismiss="modal" aria-label="Close"><span>닫기</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // HR담당자 팝업 -->
+</body>
+<!-- 외부파일 스크립트 -->
+<script src="../../src/plugins/jQuery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="../../src/plugins/jQuery-slimScroll-1.3.8/jquery.slimscroll.min.js"></script>
+<script src="../../src/plugins/bootstrap-4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../src/plugins/jsCalendar_v1.4.4/source/jsCalendar.min.js"></script>
+<script src="../../src/plugins/jsCalendar_v1.4.4/source/jsCalendar.lang.ko.js"></script>
+<script src="../../src/js/common.js"></script>
+<!-- // 외부파일 스크립트 -->
+</html>

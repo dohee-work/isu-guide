@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>guide</title>
+    <link rel="stylesheet" href="../../src/css/external.css"><!-- 외부 css -->
+    <link rel="stylesheet" href="../../portal/assets/css/portal_style.css"><!-- 포털 css 링크 -->
+    <link rel="stylesheet" href="../guide_style.css"><!-- 가이드 전용 css 링크 -->
+</head>
+<body>
+    <div class="wrap"><!-- 권한 2개 이상일 경우 class="addAuth" 를 해당 위치에 붙임 -->
+        <!-- header -->
+        <header class="header">
+            <h1><a href="../guide.html" class="logo"><span class="blind">ISU</span></a></h1>
+            <!-- gnb -->
+            <nav class="gnb">
+                <ul>
+                    <li class="default ui_accordion"><!-- 임직원공통에만 'default' / 권한에 따라 달라지는 메뉴에는 'auth' Class 부여 -->
+                        <a class="depth1 acco_btn"><i>person</i>임직원공통<i class="more"></i></a>
+                        <ul class="depth2 acco_cont" style="display: block">
+                            <li>
+                                <a href="layout.html"><i>web</i>Layout</a>
+                            </li>
+                            <li>
+                                <a href="button.html"><i>touch_app</i>Button</a>
+                            </li>
+                            <li>
+                                <a href="form.html"><i>fact_check</i>Form</a>
+                            </li>
+                            <li>
+                                <a href="input.html"><i>check_box</i>Input</a>
+                            </li>
+                            <li>
+                                <a href="list.html"><i>format_list_bulleted</i>List</a>
+                            </li>
+                            <li>
+                                <a href="tab.html"><i>tab</i>Tab</a>
+                            </li>
+                            <li>
+                                <a href="table.html"><i>table_view</i>Table</a>
+                            </li>
+                            <li>
+                                <a href="popup.html"><i>web_asset</i>Popup</a>
+                            </li>
+                            <li>
+                                <a href="etc.html"><i>more</i>Etc.</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- // gnb -->
+            <div class="info_hr">
+                <button class="btn_hr butn" data-toggle="modal" data-target="#hrmodal"><span><i>outlined_flag</i>HR담당자</span></button>
+            </div>
+        </header>
+        <!-- // header -->
+        <!-- container -->
+        <div class="content main"><!-- 메인페이지에만 해당 클래스에 main 클래스 추가 -->
+            <!-- 컨텐츠 상단 고정 영역 -->
+            <article class="cont_header">
+                <div class="wrap_inner clear">
+                    <div class="fl">
+                        <!-- 검색어 입력영역 -->
+                        <div class="wrap_search">
+                            <input type="text" placeholder="임직원 검색">
+                            <button class="btn_search material-icons-outlined"><span>search</span><span class="hide">검색</span></button>
+                        </div>
+                        <!-- // 검색어 입력영역 -->
+                    </div>
+                    <div class="fr util_list">
+                        <button class="butn_ico"><span>lock</span><span class="hide">화면잠금</span></button>
+                        <a href="#" class="butn_ico"><span>assignment</span><span class="hide">게시판</span></a>
+                        <button class="butn_ico noti on"><span>notifications</span><span class="hide">알림</span></button><!-- 알림이 있을 경우 class="on"이 추가 됨 -->
+                        <!-- 프로필 -->
+                        <div class="wrap_member ui_dropdown none right">
+                            <button class="drop_btn profile"></button><!-- 프로필 버튼 -->
+                            <ul class="drop_cont list">
+                                <li><a href="#">비밀번호변경</a></li>
+                                <li><a href="#">로그아웃</a></li>
+                            </ul>
+                        </div>
+                        <!-- // 프로필 -->
+                    </div>
+                </div>
+            </article>
+            <!-- // 컨텐츠 상단 고정 영역 -->
+            <!-- 컨텐츠 영역 -->
+            <article class="cont">
+                <div class="wrap_inner">
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h2>Popup</h2>
+                            <ul class="list_txt mt8">
+                                <li>형태는 모달 팝업, 윈도우 팝업 2가지 이다.</li>
+                                <li>형태를 나누게 되는 케이스는 최상단 클래스에 아래와 같은 클래스가 있을 때로 형태 구분한다. <br>
+                                - 윈도우 팝업에는 popup 클래스만 있음 <br>
+                                - 모달 팝업은 popup과 modal이 같이 있음 </li>
+                            </ul>
+                            <h3 class="tit2">사이즈</h3>
+                            <p class="mb8">popup 클래스에 아래와 같은 클래스가 추가 시 사이즈가 정해짐.</p>
+                            <ul class="list_txt">
+                                <li>sml : 450px</li>
+                                <li>mid : 600px</li>
+                                <li>lar : 800px</li>
+                                <li>rla : 960px (rd 뷰어로 인한 너비 추가)</li>
+                                <li>xla : 1170px</li>
+                                <li>full : 전체화면에 컨텐츠 화면 영역의 가로가 800px</li>
+                                <li>full board : 전체화면에 컨텐츠 화면 영역의 가로가 960px. 주로 게시판페이지에 사용됨</li>
+                            </ul>
+                        </section>
+                        <!-- // 환영메세지 -->
+                    </div>
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h3 class="tit1 mt0">윈도우 팝업 html 기본 형태</h3>
+                            <div class="row row-cols-2">
+                                <div class="col wrap_img"><img src="../image/ex_popup_1.png" alt=""></div>
+                                <div class="col code">
+                                <pre>
+&lt;div class="popup sml"&gt; /* 최상단 클래스 입력 */
+        &lt;div class="pop_header"&gt;
+            &lt;h1 class="title"&gt;팝업 제목&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;div class="pop_body"&gt;
+                팝업 내용 들어가는 부분
+        &lt;/div&gt;
+&lt;/div&gt; </pre>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h3 class="tit1 mt0">모달 팝업 html 기본 형태</h3>
+                            <div class="wrap_img"><img src="../image/ex_popup_2.png" alt=""></div>
+                            <div class="code">
+                            <pre>
+&lt;div class="popup modal sml" id="modal1"&gt; /* 최상단 클래스 입력 */
+        &lt;div class="<span class="hlight2">popup_inner</span> <span class="hlight">modal-dialog modal-dialog-centered</span>"&gt; /* <span class="hlight">해당부분이 들어가야 가운데 정렬됨. 모달 팝업에서 필요</span> */
+           /* <span class="hlight2">popup_inner의 위치가 전체화면 모달과 다름</span> */
+            &lt;div class="modal-content"&gt;
+                &lt;div class="modal-header"&gt;
+                    &lt;h1 class="title"&gt;팝업 제목&lt;/h1&gt;
+                &lt;/div&gt;
+                &lt;div class="modal-body"&gt;
+                    팝업 내용 들어가는 부분
+                &lt;/div&gt;
+                &lt;div class="modal-footer"&gt; /* 해당 영역에 주로 버튼이 들어감 */
+                    &lt;button class="butn" data-dismiss="modal" aria-label="Close"&gt;취소&lt;/button&gt;
+                    &lt;button class="butn fbold"&gt;저장&lt;/button&gt;
+                &lt;/div&gt;
+           &lt;/div&gt;
+        &lt;/div&gt;
+&lt;/div&gt; </pre>
+                            </div>
+                            <p>모달 팝업 사용방법 기본 내용은 bootstrap 4 방법과 동일</p>
+                        </section>
+                    </div>
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h3 class="tit1 mt0">전체화면 모달 html 기본 형태 </h3>
+                            <div class="wrap_img"><img src="../image/ex_popup_3.png" alt=""></div>
+                            <div class="code">
+                            <pre>
+&lt;div class="popup modal full" id="modal"&gt; /* 최상단 클래스 입력 */
+        &lt;div class="modal-header"&gt;
+            &lt;h1 class="title"&gt;팝업 제목&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;div class="modal-body"&gt;
+            &lt;div class="<span class="hlight2">popup_inner</span>"&gt; /* <span class="hlight2">popup_inner의 위치가 일반모달과 다름</span> */
+                팝업 내용 들어가는 부분
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button type="button" class="butn closed" data-dismiss="modal" aria-label="Close"&gt;&lt;i&gt;&lt;/i&gt;&lt;span class="hide"&gt;닫기&lt;/span&gt;&lt;/button&gt; /* 팝업 닫기 버튼이 따로 있음 */
+ &lt;/div&gt; </pre>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h3 class="tit1 mt0">팝업 하단 버튼 스타일</h3>
+                            <div class="row row-col-2">
+                                <div class="col">
+                                    <h4 class="tit2">일반 버튼</h4>
+                                    <button class="butn outline">취소</button>
+                                    <div class="code">
+                                        &lt;button class="butn <span class="hlight">outline</span>"&gt;취소&lt;/button&gt;
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-col-2">
+                                <div class="col">
+                                    <h4 class="tit2">확인 버튼 - 기본</h4>
+                                    <button class="butn fbold outline">확인</button>
+                                    <div class="code">
+                                        &lt;button class="butn fbold <span class="hlight">outline</span>"&gt;확인&lt;/button&gt;
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h4 class="tit2">확인 버튼 - 입력완료</h4>
+                                    <button class="butn fbold blue">확인</button>
+                                    <div class="code">
+                                        &lt;button class="butn fbold <span class="hlight">blue</span>"&gt;확인&lt;/button&gt;
+                                    </div>
+                                    <p>입력 할 내용이 모두 완료 되었을 때 <span class="hlight">확인 기본 버튼에서 class="blue"가 추가</span>된다.</p>
+                                </div>
+                            </div>
+                            <h4 class="tit2">기타 - 전체 모달 형태 시 닫기 버튼</h4>
+                            <div class="code">
+                                &lt;button type="button" class="butn <span class="hlight">closed</span>" <span class="hlight2">data-dismiss="modal" aria-label="Close"</span>&gt;<span class="hlight3">&lt;i&gt;&lt;/i&gt;</span>&lt;span class="hide"&gt;닫기&lt;/span&gt;&lt;/button&gt;
+                            </div>
+                            <p><span class="hlight">기존 버튼에 closed 라는 클래스가 추가</span>되고 <span class="hlight3">i tag</span> 가 안에 들어감. </p>
+                            <p>닫기 버튼일 시 <span class="hlight2">data-dismiss="modal" aria-label="Close"</span> 이 반드시 추가 되어야 한다. </p>
+                        </section>
+                    </div>
+                </div>
+            </article>
+            <!-- // 컨텐츠 영역 -->
+        </div>
+        <!-- // container -->
+    </div>
+    <!-- HR담당자 팝업 -->
+    <div class="popup modal mid" id="hrmodal"><!-- popup 클래스에 사이즈 조절 클래스는 3가지(sml/mid/lar) -->
+        <div class="popup_inner modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="title">HR담당자</h1>
+                </div>
+                <div class="modal-body">
+                    <ul class="list col2">
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                            <div class="info">
+                                <p class="name">김이수</p>
+                                <p class="roll">급여</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"></div><!-- 이미지 없을 떄 -->
+                            <div class="info">
+                                <p class="name">이희수</p>
+                                <p class="roll">인사</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                            <div class="info">
+                                <p class="name">김수찬</p>
+                                <p class="roll">복리후생</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                            <div class="info">
+                                <p class="name">이수지</p>
+                                <p class="roll">근태,조직</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="butn hbold" data-dismiss="modal" aria-label="Close"><span>닫기</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // HR담당자 팝업 -->
+</body>
+<!-- 외부파일 스크립트 -->
+<script src="../../src/plugins/jQuery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="../../src/plugins/jQuery-slimScroll-1.3.8/jquery.slimscroll.min.js"></script>
+<script src="../../src/plugins/bootstrap-4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../src/plugins/jsCalendar_v1.4.4/source/jsCalendar.min.js"></script>
+<script src="../../src/plugins/jsCalendar_v1.4.4/source/jsCalendar.lang.ko.js"></script>
+<script src="../../src/js/common.js"></script>
+<!-- // 외부파일 스크립트 -->
+</html>

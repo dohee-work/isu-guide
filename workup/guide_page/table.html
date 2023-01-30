@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>guide</title>
+    <link rel="stylesheet" href="../../src/css/external.css"><!-- 외부 css -->
+    <link rel="stylesheet" href="../../portal/assets/css/portal_style.css"><!-- 포털 css 링크 -->
+    <link rel="stylesheet" href="../guide_style.css"><!-- 가이드 전용 css 링크 -->
+</head>
+<body>
+    <div class="wrap"><!-- 권한 2개 이상일 경우 class="addAuth" 를 해당 위치에 붙임 -->
+        <!-- header -->
+        <header class="header">
+            <h1><a href="../guide.html" class="logo"><span class="blind">ISU</span></a></h1>
+            <!-- gnb -->
+            <nav class="gnb">
+                <ul>
+                    <li class="default ui_accordion"><!-- 임직원공통에만 'default' / 권한에 따라 달라지는 메뉴에는 'auth' Class 부여 -->
+                        <a class="depth1 acco_btn"><i>person</i>임직원공통<i class="more"></i></a>
+                        <ul class="depth2 acco_cont" style="display: block">
+                            <li>
+                                <a href="layout.html"><i>web</i>Layout</a>
+                            </li>
+                            <li>
+                                <a href="button.html"><i>touch_app</i>Button</a>
+                            </li>
+                            <li>
+                                <a href="form.html"><i>fact_check</i>Form</a>
+                            </li>
+                            <li>
+                                <a href="input.html"><i>check_box</i>Input</a>
+                            </li>
+                            <li>
+                                <a href="list.html"><i>format_list_bulleted</i>List</a>
+                            </li>
+                            <li>
+                                <a href="tab.html"><i>tab</i>Tab</a>
+                            </li>
+                            <li>
+                                <a href="table.html"><i>table_view</i>Table</a>
+                            </li>
+                            <li>
+                                <a href="popup.html"><i>web_asset</i>Popup</a>
+                            </li>
+                            <li>
+                                <a href="etc.html"><i>more</i>Etc.</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- // gnb -->
+            <div class="info_hr">
+                <button class="btn_hr butn" data-toggle="modal" data-target="#hrmodal"><span><i>outlined_flag</i>HR담당자</span></button>
+            </div>
+        </header>
+        <!-- // header -->
+        <!-- container -->
+        <div class="content main"><!-- 메인페이지에만 해당 클래스에 main 클래스 추가 -->
+            <!-- 컨텐츠 상단 고정 영역 -->
+            <article class="cont_header">
+                <div class="wrap_inner clear">
+                    <div class="fl">
+                        <!-- 검색어 입력영역 -->
+                        <div class="wrap_search">
+                            <input type="text" placeholder="임직원 검색">
+                            <button class="btn_search material-icons-outlined"><span>search</span><span class="hide">검색</span></button>
+                        </div>
+                        <!-- // 검색어 입력영역 -->
+                    </div>
+                    <div class="fr util_list">
+                        <button class="butn_ico"><span>lock</span><span class="hide">화면잠금</span></button>
+                        <a href="#" class="butn_ico"><span>assignment</span><span class="hide">게시판</span></a>
+                        <button class="butn_ico noti on"><span>notifications</span><span class="hide">알림</span></button><!-- 알림이 있을 경우 class="on"이 추가 됨 -->
+                        <!-- 프로필 -->
+                        <div class="wrap_member ui_dropdown none right">
+                            <button class="drop_btn profile"></button><!-- 프로필 버튼 -->
+                            <ul class="drop_cont list">
+                                <li><a href="#">비밀번호변경</a></li>
+                                <li><a href="#">로그아웃</a></li>
+                            </ul>
+                        </div>
+                        <!-- // 프로필 -->
+                    </div>
+                </div>
+            </article>
+            <!-- // 컨텐츠 상단 고정 영역 -->
+            <!-- 컨텐츠 영역 -->
+            <article class="cont">
+                <div class="wrap_inner">
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h2>Table</h2>
+                            <h3 class="tit1 mt0">line 있는 table</h3>
+                            <h4 class="tit2">기본</h4>
+                            <table class="basic">
+                                <thead>
+                                    <tr>
+                                        <th>head1</th>
+                                        <th>head2</th>
+                                        <th>head3</th>
+                                        <th>head4</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>body1</td>
+                                        <td>body2</td>
+                                        <td>body3</td>
+                                        <td>body4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h4 class="tit2">type2</h4>
+                            <table class="basic type2">
+                                <thead>
+                                    <tr>
+                                        <th>head1</th>
+                                        <th>head2</th>
+                                        <th>head3</th>
+                                        <th>head4</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>body1</td>
+                                        <td>body2</td>
+                                        <td>body3</td>
+                                        <td>body4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h4 class="tit2">type3</h4>
+                            <table class="basic type3">
+                                <thead>
+                                    <tr>
+                                        <th>head1</th>
+                                        <th>head2</th>
+                                        <th>head3</th>
+                                        <th>head4</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>body1</td>
+                                        <td>body2</td>
+                                        <td>body3</td>
+                                        <td>body4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h4 class="tit2">type4</h4>
+                            <table class="basic type4">
+                                <thead>
+                                    <tr>
+                                        <th>head1</th>
+                                        <th>head2</th>
+                                        <th>head3</th>
+                                        <th>head4</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>body1</td>
+                                        <td>body2</td>
+                                        <td>body3</td>
+                                        <td>body4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h4 class="tit2">type5</h4>
+                            <table class="basic type5">
+                                <thead>
+                                    <tr>
+                                        <th>head1</th>
+                                        <th>head2</th>
+                                        <th>head3</th>
+                                        <th>head4</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>body1</td>
+                                        <td>body2</td>
+                                        <td>body3</td>
+                                        <td>body4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h4 class="tit2">big</h4>
+                            <table class="basic big">
+                                <thead>
+                                    <tr>
+                                        <th>head1</th>
+                                        <th>head2</th>
+                                        <th>head3</th>
+                                        <th>head4</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>body1</td>
+                                        <td>body2</td>
+                                        <td>body3</td>
+                                        <td>body4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h4 class="tit2">small</h4>
+                            <table class="basic small">
+                                <thead>
+                                    <tr>
+                                        <th>head1</th>
+                                        <th>head2</th>
+                                        <th>head3</th>
+                                        <th>head4</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>body1</td>
+                                        <td>body2</td>
+                                        <td>body3</td>
+                                        <td>body4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h3 class="tit1 mt0">line 없는 table</h3>
+                            <h4 class="tit2">기본</h4>
+                            <table class="no-line">
+                                <thead>
+                                    <tr>
+                                        <th>head1</th>
+                                        <th>head2</th>
+                                        <th>head3</th>
+                                        <th>head4</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>body1</td>
+                                        <td>body2</td>
+                                        <td>body3</td>
+                                        <td>body4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h4 class="tit2">type2</h3>
+                            <table class="no-line type2">
+                                <thead>
+                                    <tr>
+                                        <th>head1</th>
+                                        <th>head2</th>
+                                        <th>head3</th>
+                                        <th>head4</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>body1</td>
+                                        <td>body2</td>
+                                        <td>body3</td>
+                                        <td>body4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h4 class="tit2">type3</h3>
+                            <table class="no-line type3">
+                                <thead>
+                                    <tr>
+                                        <th>head1</th>
+                                        <th>head2</th>
+                                        <th>head3</th>
+                                        <th>head4</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>body1</td>
+                                        <td>body2</td>
+                                        <td>body3</td>
+                                        <td>body4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+                    <div class="cont_row">
+                        <section class="box greeting">
+                            <h2>table 내 스타일</h2>
+                            <h3 class="tit1">특정 셀에 background color</h3>
+                            <table class="basic">
+                                <thead>
+                                    <tr>
+                                        <th class="bg-red">head1</th>
+                                        <th>head2</th>
+                                        <th>head3</th>
+                                        <th>head4</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>body1</td>
+                                        <td>body2</td>
+                                        <td>body3</td>
+                                        <td>body4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h3 class="tit1">table scroll</h3>
+                            <div class="scroll-table">
+                                <table class="basic">
+                                    <thead>
+                                        <tr>
+                                            <th>head1</th>
+                                            <th>head2</th>
+                                            <th>head3</th>
+                                            <th>head4</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>body1</td>
+                                            <td>body2</td>
+                                            <td>body3</td>
+                                            <td>body4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>body1</td>
+                                            <td>body2</td>
+                                            <td>body3</td>
+                                            <td>body4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>body1</td>
+                                            <td>body2</td>
+                                            <td>body3</td>
+                                            <td>body4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>body1</td>
+                                            <td>body2</td>
+                                            <td>body3</td>
+                                            <td>body4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>body1</td>
+                                            <td>body2</td>
+                                            <td>body3</td>
+                                            <td>body4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>body1</td>
+                                            <td>body2</td>
+                                            <td>body3</td>
+                                            <td>body4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>body1</td>
+                                            <td>body2</td>
+                                            <td>body3</td>
+                                            <td>body4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>body1</td>
+                                            <td>body2</td>
+                                            <td>body3</td>
+                                            <td>body4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>body1</td>
+                                            <td>body2</td>
+                                            <td>body3</td>
+                                            <td>body4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>body1</td>
+                                            <td>body2</td>
+                                            <td>body3</td>
+                                            <td>body4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>body1</td>
+                                            <td>body2</td>
+                                            <td>body3</td>
+                                            <td>body4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>body1</td>
+                                            <td>body2</td>
+                                            <td>body3</td>
+                                            <td>body4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>body1</td>
+                                            <td>body2</td>
+                                            <td>body3</td>
+                                            <td>body4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>body1</td>
+                                            <td>body2</td>
+                                            <td>body3</td>
+                                            <td>body4</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </article>
+            <!-- // 컨텐츠 영역 -->
+        </div>
+        <!-- // container -->
+    </div>
+    <!-- HR담당자 팝업 -->
+    <div class="popup modal mid" id="hrmodal"><!-- popup 클래스에 사이즈 조절 클래스는 3가지(sml/mid/lar) -->
+        <div class="popup_inner modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="title">HR담당자</h1>
+                </div>
+                <div class="modal-body">
+                    <ul class="list col2">
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                            <div class="info">
+                                <p class="name">김이수</p>
+                                <p class="roll">급여</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"></div><!-- 이미지 없을 떄 -->
+                            <div class="info">
+                                <p class="name">이희수</p>
+                                <p class="roll">인사</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                            <div class="info">
+                                <p class="name">김수찬</p>
+                                <p class="roll">복리후생</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                        <li class="staffcard type1"><!-- 210720 class="type1" 추가 -->
+                            <div class="img"><img src="../../src/images/KimISU.JPG" alt=""></div>
+                            <div class="info">
+                                <p class="name">이수지</p>
+                                <p class="roll">근태,조직</p>
+                            </div>
+                            <ul class="detail">
+                                <li><dl><dt>이메일</dt><dd>isukim@isu.co.kr</dd></dl></li>
+                                <li><dl><dt>사무실 전화</dt><dd>02-590-1234</dd></dl></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="butn hbold" data-dismiss="modal" aria-label="Close"><span>닫기</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // HR담당자 팝업 -->
+</body>
+<!-- 외부파일 스크립트 -->
+<script src="../../src/plugins/jQuery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="../../src/plugins/jQuery-slimScroll-1.3.8/jquery.slimscroll.min.js"></script>
+<script src="../../src/plugins/bootstrap-4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../src/plugins/jsCalendar_v1.4.4/source/jsCalendar.min.js"></script>
+<script src="../../src/plugins/jsCalendar_v1.4.4/source/jsCalendar.lang.ko.js"></script>
+<script src="../../src/js/common.js"></script>
+<!-- // 외부파일 스크립트 -->
+</html>
