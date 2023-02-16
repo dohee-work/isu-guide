@@ -1,0 +1,13 @@
+.code:before{content:'\e86f'; position: absolute; left: -1px; top: -26px; font-family: 'Material Icons'; padding: 5px 10px; line-height: 1.2; border-radius: 5px 5px 0 0; font-size: 14px; font-weight: 700; background-color: #33acee; color: #fff}
+.code{position: relative; display: table; margin-top: 31px; border-radius: 0 10px 10px 10px; border: 1px solid #33acee; padding: 16px; text-indent: 0; color: #363c43}
+.code pre{white-space: pre-wrap}
+.hlight{padding: 0 3px; background-color: rgb(255 193 5 / 50%)}
+.hlight2{padding: 0 3px; background-color: rgb(51 172 238 / 30%)}
+.hlight3{padding: 0 3px; background-color: rgb(76 175 80 / 50%)}
+.hlight4{padding: 0 3px; background-color: rgb(103 58 183 / 50%)}
+.wrap_img img{max-width: 100%}
+.main .cont .box h2{margin-bottom: 8px}
+.tit1{margin: 24px 0 16px; font-size: 18px; color: #2AA9D2}
+.tit2{margin: 16px 0; font-size: 16px; color: #1874C3}
+.tit3{margin: 16px 0; font-size: 14px; color: #2931B3}
+.pd24{padding: 24px}
