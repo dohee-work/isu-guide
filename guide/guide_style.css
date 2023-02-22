@@ -11,3 +11,8 @@
 .tit2{margin: 16px 0; font-size: 16px; color: #1874C3}
 .tit3{margin: 16px 0; font-size: 14px; color: #2931B3}
 .pd24{padding: 24px}
+
+.content {min-height : calc(100vh - 130px);}
+#footer{padding: 24px 0px 44px; border-top:1px solid #e8e8e8; text-align: center; font-size: 12px; letter-spacing: -0.24px; color: #777e87; background-color: #ffffff;}
+#footer .company img{display: inline-block;}
+#footer .info{margin-top:8px; line-height: 1.5;}
